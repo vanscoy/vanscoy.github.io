@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Bryan Van Scoy - convex optimization</title>
+<!-- MathJax -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } } });
+</script>
+<!-- End MathJax -->
+<script>
+// Toggle Display of BibTeX
+function toggleBibtex(articleid) {
+	var bib = document.getElementById('bib_'+articleid);
+	if (bib) {
+		if(bib.className.indexOf('bibtex') != -1) {
+			bib.className.indexOf('noshow') == -1 ? bib.className = 'bibtex noshow' : bib.className = 'bibtex';
+		}
+	}
+}
+</script>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Bryan Van Scoy</div>
+<div class="menu-item"><a href="index.html">home</a></div>
+<div class="menu-item"><a href="publications.html">publications</a></div>
+<div class="menu-category">Research</div>
+<div class="menu-item"><a href="convexoptimization.html" class="current">convex&nbsp;optimization</a></div>
+<div class="menu-item"><a href="averageconsensus.html">average&nbsp;consensus</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Bryan Van Scoy - convex optimization</h1>
+</div>
+<p>Consider a function \(f:\mathbb{R}^d\to\mathbb{R}\). Suppose \(f\) is \(L\)-smooth and \(\mu\)-strongly convex with \(0&lt;\mu\leq L\), and let \(x_\star\in\mathbb{R}^d\) denote the unique minimizer of \(f\). Denote the condition ratio of \(f\) as \(\kappa = L/\mu\).</p>
+<div class="infoblock">
+<div class="blocktitle">Triple Momentum Method</div>
+<div class="blockcontent">
+<p>Given initial conditions \(x_{-1},x_0\in\mathbb{R}^d\), the <i>Triple Momentum Method</i> is given by the iteration</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+x_{k+1} &amp;= x_k + \beta\,(x_k-x_{k-1}) - \alpha\,\nabla\!f(y_k) \\
+y_k     &amp;= x_k + \gamma\,(x_k-x_{k-1})
+\end{aligned}
+\]
+</p><p>where the stepsizes are</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+\alpha &amp;= \frac{1+\rho}{L}  &amp;
+\beta  &amp;= \frac{\rho^2}{2-\rho}  &amp;
+\gamma &amp;= \frac{\rho^2}{(1+\rho)(2-\rho)}
+\end{aligned}
+\]
+</p><p>with \(\rho = 1-1/\sqrt{\kappa}\). The iterate sequence \(\{x_k\}\) converges linearly with rate \(\rho\) to the optimizer. In particular, the bound</p>
+<p style="text-align:center">
+\[
+\|x_k-x_\star\| \leq c\,\rho^k \qquad \text{for }k\geq 1
+\]
+</p><p>is satisfied where \(c&gt;0\) is a constant that does not depend on \(k\).</p>
+<p>For more information, see our <a href="docs/papers/vanscoy2018fastest.pdf" target=&ldquo;blank&rdquo;>paper</a>.</p>
+</div></div>
+<div class="infoblock">
+<div class="blocktitle">Robust Momentum Method</div>
+<div class="blockcontent">
+<p>Given initial conditions \(x_{-1},x_0\in\mathbb{R}^d\), the <i>Robust Momentum Method</i> is given by the iteration</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+x_{k+1} &amp;= x_k + \beta\,(x_k-x_{k-1}) - \alpha\,\nabla\!f(y_k) \\
+y_k     &amp;= x_k + \gamma\,(x_k-x_{k-1})
+\end{aligned}
+\]
+</p><p>where the stepsizes are</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+\alpha &amp;= \frac{\kappa\,(1-\rho)^2(1+\rho)}{L}  &amp;
+\beta  &amp;= \frac{\kappa\,\rho^3}{\kappa-1}  &amp;
+\gamma &amp;= \frac{\rho^3}{(\kappa-1)(1-\rho)^2(1+\rho)}
+\end{aligned}
+\]
+</p><p>with \(\rho\in[1-1/\sqrt{\kappa},1-1/\kappa]\). The iterate sequence \(\{x_k\}\) converges linearly with rate \(\rho\) to the optimizer. In particular, the bound</p>
+<p style="text-align:center">
+\[
+\|x_k-x_\star\| \leq c\,\rho^k \qquad \text{for }k\geq 1
+\]
+</p><p>is satisfied where \(c&gt;0\) is a constant that does not depend on \(k\).</p>
+<p>The parameter \(\rho\) directly controls the worst-case convergence rate of the algorithm. In particular, we have the following:</p>
+<ul>
+<li><p>The minimum value is \(\rho = 1-1/\sqrt{\kappa}\). This is the fastest achievable convergence rate, but the resulting algorithm is very fragile to gradient noise. This choice recovers the Triple Momentum Method.</p>
+</li>
+<li><p>The maximum value is \(\rho = 1-1/\kappa\). This is the slowest achievable convergence rate, but the resulting algorithm is very robust to gradient noise. This choice recovers the Gradient Method with stepsize \(1/L\).</p>
+</li>
+</ul>
+<p>For more information, see our <a href="docs/papers/cyrus2018robust.pdf" target=&ldquo;blank&rdquo;>paper</a>.</p>
+</div></div>
+<h2>Code</h2>
+<p>We can also analyze the worst-case linear convergence rate of various algorithms numerically. For example, the following code calculates the worst-case linear convergence rate of the following methods when applied to an \(L\)-smooth \(\mu\)-strongly convex function:</p>
+<ul>
+<li><p>Gradient method with step-size \(1/L\)</p>
+</li>
+<li><p>Gradient method with step-size \(2/(L+\mu)\)</p>
+</li>
+<li><p>Heavy-ball method</p>
+</li>
+<li><p>Fast gradient method</p>
+</li>
+<li><p>Triple momentum method</p>
+</li>
+</ul>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+mu = 1;   % strong convexity parameter
+L  = 10;  % Lipschitz parameter of gradient
+
+FixedStepMethod(mu,L);
+
+% Results printed to screen:
+%
+%        Method     Rate
+%      GM (1/L) : 0.9000
+% GM (2/(L+mu)) : 0.8182
+%           HBM : 0.8602
+%           FGM : 0.7518
+%           TMM : 0.6838
+</pre></div></div>
+<p>For more information, including the analysis of the gradient and heavy-ball methods with subspace searches and the fast gradient method with fixed restart, see our <a href="docs/papers/taylor2018lyapunov.pdf" target=&ldquo;blank&rdquo;>paper</a> and our <a href="https://github.com/QCGroup/quad-lyap-first-order" target=&ldquo;blank&rdquo;>code</a>.</p>
+<div id="footer">
+<div id="footer-text">
+Page generated 2018-03-20 19:38:11 CDT, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Bryan Van Scoy - dynamic average consensus</title>
+<!-- MathJax -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } } });
+</script>
+<!-- End MathJax -->
+<script>
+// Toggle Display of BibTeX
+function toggleBibtex(articleid) {
+	var bib = document.getElementById('bib_'+articleid);
+	if (bib) {
+		if(bib.className.indexOf('bibtex') != -1) {
+			bib.className.indexOf('noshow') == -1 ? bib.className = 'bibtex noshow' : bib.className = 'bibtex';
+		}
+	}
+}
+</script>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Bryan Van Scoy</div>
+<div class="menu-item"><a href="index.html">home</a></div>
+<div class="menu-item"><a href="publications.html">publications</a></div>
+<div class="menu-category">Research</div>
+<div class="menu-item"><a href="convexoptimization.html">convex&nbsp;optimization</a></div>
+<div class="menu-item"><a href="averageconsensus.html" class="current">average&nbsp;consensus</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Bryan Van Scoy - dynamic average consensus</h1>
+</div>
+<p>Consider a group of \(n\) agents connected in a network. Suppose the network is constant, connected, and undirected, and let \(L\) be the weighted Laplacian matrix corresponding to the weighted adjacency matrix \([a_{ij}]\). Denote the minimum and maximum nonzero eigenvalues of \(L\) as \(\lambda_\text{min}\) and \(\lambda_\text{max}\), respectively. Also, define the corresponding condition ratio \(\kappa = \lambda_\text{max}/\lambda_\text{min}\).</p>
+<p>Suppose each agent \(i\in\{1,\ldots,n\}\) has a discrete-time input signal \(\{u_k^i\}\), and denote the average signal \(u_k^\text{avg} = \frac{1}{n}\sum_{i=1}^n u_k^i\).</p>
+<p>Each of the following algorithms is designed such that each agent tracks the global average \(u_k^\text{avg}\) with zero steady-state error when the input signals are constant. If the input signals are 
+slowly time-varying, then the agents track the average with small steady-state error.</p>
+<p>For more information, see our <a href="docs/papers/kia2018tutorial.pdf" target=&ldquo;blank&rdquo;>tutorial paper</a>.</p>
+<h2>Non-robust estimators</h2>
+<p>First, consider the following integral estimators. The first estimator is comparable to gradient descent, while the second is comparable to the heavy-ball method in optimization.</p>
+<div class="infoblock">
+<div class="blocktitle">Integral Estimator</div>
+<div class="blockcontent">
+<p>Given initial conditions \(p_0^i\in\mathbb{R}\) for \(i\in\{1,\ldots,n\}\), the <i>Accelerated Integral Estimator</i> is given by the iteration</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+p_{k+1}^i &amp;= p_k^i + k_I \sum_{j=1}^n a_{ij}\,(x_k^i-x_k^j) \\
+x_k^i     &amp;= u_k^i - p_k^i
+\end{aligned}
+\]
+</p><p>where the stepsizes are</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+k_I  &amp;= \frac{2}{\lambda_\text{max}+\lambda_\text{min}}  &amp;  &amp;\text{and}  &amp;
+\rho &amp;= \frac{\kappa-1}{\kappa+1}.
+\end{aligned}
+\]
+</p><p>For each agent \(i\in\{1,\ldots,n\}\), the iterate sequence \(\{x_k^i\}\) converges linearly with rate \(\rho\) to the average signal \(u_k^\text{avg}\) if the input signals \(\{u_k^i\}\) are constant and the initial conditions satisfy \(\sum_{i=1}^n p_0^i = 0\).</p>
+</div></div>
+<div class="infoblock">
+<div class="blocktitle">Accelerated Integral Estimator</div>
+<div class="blockcontent">
+<p>Given initial conditions \(p_{-1}^i,p_0^i\in\mathbb{R}\) for \(i\in\{1,\ldots,n\}\), the <i>Integral Estimator</i> is given by the iteration</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+p_{k+1}^i &amp;= p_k^i + \rho^2\,(p_k^i-p_{k-1}^i) + k_I \sum_{j=1}^n a_{ij}\,(x_k^i-x_k^j) \\
+x_k^i     &amp;= u_k^i - p_k^i
+\end{aligned}
+\]
+</p><p>where the stepsizes are</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+k_I  &amp;= \frac{4}{(\sqrt{\lambda_\text{max}}+\sqrt{\lambda_\text{min}})^2}  &amp;  &amp;\text{and}  &amp;
+\rho &amp;= \frac{\sqrt{\kappa}-1}{\sqrt{\kappa}+1}.
+\end{aligned}
+\]
+</p><p>For each agent \(i\in\{1,\ldots,n\}\), the iterate sequence \(\{x_k^i\}\) converges linearly with rate \(\rho\) to the average signal \(u_k^\text{avg}\) if the input signals \(\{u_k^i\}\) are constant and the initial conditions satisfy \(\sum_{i=1}^n p_{-1}^i = 0\) and \(\sum_{i=1}^n p_0^i = 0\).</p>
+</div></div>
+<h2>Robust estimators</h2>
+<p>Both of the previous estimators require correct initialization. In situations where this is undesired, we can instead use estimators which are <i>robust to initial conditions</i>, meaning that the steady-state error is independent of the initial conditions.</p>
+<div class="infoblock">
+<div class="blocktitle">Proportional Integral Estimator</div>
+<div class="blockcontent">
+<p>Given initial conditions \(p_0^i,q_0^i\in\mathbb{R}\) for \(i\in\{1,\ldots,n\}\), the <i>Proportional Integral Estimator</i> is given by the iteration</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+q_{k+1}^i &amp;= \gamma\,q_k^i + k_p \sum_{j=1}^n a_{ij}\,\bigl((x_k^i-x_k^j)+(p_k^i-p_k^j)\bigr) \\
+p_{k+1}^i &amp;= p_k^i + k_I \sum_{j=1}^n a_{ij}\,(x_k^i-x_k^j) \\
+x_k^i     &amp;= u_k^i - q_k^i
+\end{aligned}
+\]
+</p><p>where the stepsizes are</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+k_I  &amp;= \frac{1-\rho}{\lambda_\text{min}}  &amp;
+k_p  &amp;= \frac{\rho\,(1-\rho)}{\kappa\,(\lambda_\text{min}-(1-\rho)\,\lambda_\text{max})}  &amp;
+\rho &amp;= \begin{cases} \rho_1, &amp; 1\leq \kappa\leq (3+\sqrt{5})/4 \\
+                      \rho_2, &amp; (3+\sqrt{5})/4\leq \kappa \end{cases}
+\end{aligned}
+\]
+</p><p>with</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+\rho_1 &amp;= \frac{\sqrt{(\kappa-1)(4\kappa^3+5\kappa-1)} - (\kappa-1)}{2\,(\kappa^2+1)} \\
+\rho_2 &amp;= \frac{8\kappa^2-8\kappa+1}{8\kappa^2-1}.
+\end{aligned}
+\]
+</p><p>For each agent \(i\in\{1,\ldots,n\}\), the iterate sequence \(\{x_k^i\}\) converges linearly with rate \(\rho\) to the average signal \(u_k^\text{avg}\) if the input signals \(\{u_k^i\}\) are constant.</p>
+<p>For more information, see our <a href="docs/papers/vanscoy2015design.pdf" target=&ldquo;blank&rdquo;>paper</a>.</p>
+</div></div>
+<div class="infoblock">
+<div class="blocktitle">Accelerated Proportional Integral Estimator</div>
+<div class="blockcontent">
+<p>Given initial conditions \(p_{-1}^i,p_0^i,q_{-1}^i,q_0^i\in\mathbb{R}\) for \(i\in\{1,\ldots,n\}\), the <i>Accelerated Proportional Integral Estimator</i> is given by the iteration</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+q_{k+1}^i &amp;= 2\,\rho\,q_k^i - \rho^2\,q_{k-1}^i + k_p \sum_{j=1}^n a_{ij}\,\bigl((x_k^i-x_k^j)+(p_k^i-p_k^j)\bigr) \\
+p_{k+1}^i &amp;= (1+\rho^2)\,p_k^i - \rho^2\,p_{k-1}^i + k_I \sum_{j=1}^n a_{ij}\,(x_k^i-x_k^j) \\
+x_k^i     &amp;= u_k^i - q_k^i
+\end{aligned}
+\]
+</p><p>where the stepsizes are</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+k_I  &amp;= \frac{(1-\rho)^2}{\lambda_\text{min}}  &amp;
+k_p  &amp;= \beta\,k_I  &amp;
+\rho &amp;= \begin{cases} \rho_1, &amp; 1\leq \kappa\leq (1+\sqrt{2})/2 \\
+                      \rho_2, &amp; (1+\sqrt{2})/2\leq \kappa \end{cases}
+\end{aligned}
+\]
+</p><p>with</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+\rho_1 &amp;= \frac{1-\beta-2\,(1-\sqrt{\beta})}{1-\beta} \\
+\rho_2 &amp;= \frac{4-\beta+4\,(1-\sqrt{4-\beta})}{\beta}
+\end{aligned}
+\]
+</p><p>where \(\beta = 2+(2\sqrt{\kappa\,(\kappa-1)}-1)/\kappa\).</p>
+<p>For each agent \(i\in\{1,\ldots,n\}\), the iterate sequence \(\{x_k^i\}\) converges linearly with rate \(\rho\) to the average signal \(u_k^\text{avg}\) if the input signals \(\{u_k^i\}\) are constant.</p>
+<p>For more information, see our <a href="docs/papers/vanscoy2015design.pdf" target=&ldquo;blank&rdquo;>paper</a>.</p>
+</div></div>
+<h2>Summary</h2>
+<p>The following figure plots the number of iterations to converge as a function of the condition ratio of the graph Laplacian for each of the four algorithms. The integral estimator converges faster than the corresponding proportional integral estimator (both non-accelerated and accelerated versions). However, the proportional integral estimator is <i>robust to initial conditions</i>. Such algorithms can adapt to changes in the communication graph which may occur due to dropped packets, or if the agents are mobile and have a limited communication range.</p>
+<table class="imgtable"><tr><td>
+<img src="graphics/DAC_iter.png" alt="Iterations to converge" width="600px" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<div id="footer">
+<div id="footer-text">
+Page generated 2018-03-20 19:38:11 CDT, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>
