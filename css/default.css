@@ -1,0 +1,261 @@
+/*************************************
+   color theme
+ *************************************/
+@import url("defaulttheme.css");
+
+
+/*************************************
+   body
+ *************************************/
+body {
+	padding-top: 65px;  /* add padding to the top for navbar */
+	background: var(--color-background);
+	font: 85% Verdana;
+	margin-left: 2em;
+	margin-top: 1em;
+}
+body p {
+	color: var(--color-text);
+}
+body, p {
+	line-height: 1.5em;
+	margin-bottom: 1.2em;
+}
+
+/*************************************
+   headers
+ *************************************/
+h1 {
+	font-size: 155%;
+	font-weight: bold;
+	color: var(--color-h1);
+}
+h2 {
+	font-size: 160%;
+	font-weight: bold;
+	color: var(--color-h2);
+}
+h3 {
+	font-size: 140%;
+	font-weight: bold;
+	color: var(--color-h3);
+	padding-top: 10px;
+	margin-bottom: 5px;
+}
+h1, h2, h3 {
+	border: none;
+}
+
+#postdoc-researcher {
+	font-size: 170%;
+	font-weight: bold;
+	color: var(--color-h2);
+	margin-bottom: 0px;
+	margin-top: 20px;
+}
+#contact-info {
+	font-size: 125%;
+	font-weight: bold;
+	color: var(--color-h3);
+	padding-top: 15px;
+	margin-bottom: 0px;
+}
+
+hr {
+	border-width: 2px;
+	border-color: black;
+}
+
+/*************************************
+   bullet
+ *************************************/
+li {
+	color: var(--color-bullet);
+}
+
+
+/*************************************
+   bibliography
+ *************************************/
+ul.biblist {
+	margin-bottom: 1.5em;
+}
+ul.biblist li {
+	margin-bottom: -0.3em;
+}
+div.noshow {
+	display: none;
+}
+div.bibtex {
+	background: var(--color-infoblock);
+	margin-right: 0%;
+	margin-top: 1.2em;
+	margin-bottom: 1.3em;
+	border: none;
+	padding: 0.3em 0.5em;
+	border-radius: 10px;
+}
+div.bibtex pre {
+	color: var(--color-text);
+	width: 100%;
+	font-size: 85%;
+	overflow: auto;
+	margin-bottom: 0em;
+	background: var(--color-infoblock);
+	white-space: pre-wrap;       /* Since CSS 2.1 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+/*************************************
+   list description
+ *************************************/
+dt {
+	color: var(--color-list);
+}
+
+
+/*************************************
+   links
+ *************************************/
+body a {
+	color: var(--color-link);
+}
+a:hover {
+	color: var(--color-link-hover);
+}
+
+
+/*************************************
+   bold
+ *************************************/
+b {
+	font-weight: bold;
+}
+p b {
+	font-style: bold;
+}
+
+/*************************************
+   navigation bar
+ *************************************/
+nav.navbar {
+	background: var(--color-navbar);
+	padding-top: 0px;
+}
+nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link {
+	color: var(--color-navbar-link);
+	padding-top: 15px;
+	font-size: 105%;
+}
+nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link.active {
+	color: var(--color-navbar-link-active);
+	font-weight: bold;
+}
+nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:hover {
+	color: var(--color-navbar-link-hover);
+}
+nav.navbar a.navbar-brand {
+	color: var(--color-navbar-brand);
+	outline: 0;
+	font: 250% Palatino;
+	font-weight: bold;
+}
+nav.navbar a.navbar-brand:visited {
+	color: var(--color-navbar-brand);
+}
+nav.navbar button.navbar-toggler {
+	background: var(--color-navbar-link);
+}
+
+/*************************************
+   jumbotron
+ *************************************/
+.jumbotron {
+	padding: 1em 1.3em 0.25em 1.3em; /*top right bottom left*/
+	background: var(--color-background-jumbotron);
+	min-width: 420px;
+}
+.jumbotron .header-info {
+	min-width: 250px;
+}
+
+/*************************************
+   blocktitle
+ *************************************/
+div.blocktitle {
+	color: var(--color-blocktitle);
+	font-weight: bold;
+	margin-top: 1.2em;
+	margin-bottom: 0.3em;
+	border: none;
+	font-size: 115%;
+}
+
+/*************************************
+   blockcontent
+ *************************************/
+div.blockcontent {
+	border: none;
+	padding: 0.3em 0.5em;
+	border-radius: 10px;
+}
+div.blockcontent p {
+	color: var(--color-blockcontent);
+}
+
+/*************************************
+   infoblock
+ *************************************/
+div.infoblock {
+ 	margin-right: 0%;
+ 	margin-top: 1.2em;
+ 	margin-bottom: 1.3em;
+}
+div.infoblock > div.blockcontent {
+	background: var(--color-infoblock);
+}
+div.infoblock p {
+	margin-bottom: 0.3em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	margin-top: 0.15em;
+}
+
+ /*************************************
+   codeblock
+ *************************************/
+div.codeblock {
+ 	margin-right: 0%;
+ 	margin-top: 1.2em;
+ 	margin-bottom: 0em;
+	margin-left: 0em;
+}
+div.codeblock pre {
+	margin-bottom: 0em;
+	margin-left: 0.5em;
+}
+div.codeblock > div.blockcontent {
+	background: var(--color-codeblock-background);
+}
+div.codeblock > div.blockcontent > pre {
+	color: var(--color-codeblock-text);
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 95%;
+}
+div.codeblock + p {
+	margin-top: 0.5em;
+}
+
+ /*************************************
+   images
+ *************************************/
+.img-dac-iter {
+	max-height: 500px;
+	margin: 0 auto;
+}
+.pic-headshot {
+	max-height: 200px; /*160px;*/
+}
