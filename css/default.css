@@ -3,6 +3,24 @@
  *************************************/
 @import url("defaulttheme.css");
 
+/* small devices */
+@media (max-width: 767.98px) {
+  body {font-size: 60%;}
+	nav.navbar button.navbar-toggler {display: block;}
+	.jumbotron {
+		min-width: 430px;
+		margin-left: -25px;
+		margin-top: -15px;
+	}
+}
+/* large devices */
+@media (min-width: 768px) {
+  body {font-size: 85%;}
+	nav.navbar button.navbar-toggler {display: none;}
+	.jumbotron {
+		max-width: 1000px;
+	}
+}
 
 /*************************************
    body
@@ -10,7 +28,7 @@
 body {
 	padding-top: 65px;  /* add padding to the top for navbar */
 	background: var(--color-background);
-	font: 85% Verdana;
+	font-family: Verdana;
 	margin-left: 2em;
 	margin-top: 1em;
 }
@@ -72,7 +90,6 @@ hr {
 li {
 	color: var(--color-bullet);
 }
-
 
 /*************************************
    bibliography
@@ -179,8 +196,6 @@ nav.navbar button.navbar-toggler {
 .jumbotron {
 	padding: 1em 1.3em 0.25em 1.3em; /*top right bottom left*/
 	background: var(--color-background-jumbotron);
-	min-width: 550px;
-	width: auto;
 }
 .jumbotron .header-info {
 	/*min-width: 150px;*/
