@@ -166,6 +166,9 @@ nav.navbar a.navbar-brand {
 nav.navbar a.navbar-brand:visited {
 	color: var(--color-navbar-brand);
 }
+nav.navbar a.navbar-brand:hover {
+	color: var(--color-navbar-brand);
+}
 nav.navbar button.navbar-toggler {
 	background: var(--color-navbar-link);
 }
