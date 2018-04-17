@@ -42,11 +42,8 @@
 </head>
 
 
-<!-- body -->
-
-
 <!-- navigation bar -->
-<nav class="navbar navbar-expand-sm fixed-top navbar-dark">  <!-- navbar-dark bg-dark -->
+<nav class="navbar navbar-expand-md fixed-top navbar-light">  <!-- navbar-dark bg-dark -->
 
   <!-- brand -->
   <a class="navbar-brand" href="#" onclick="return show('home','home');">Bryan Van Scoy</a>
@@ -94,24 +91,27 @@
         </a>
       </li>
       <!--li class="nav-item swap-theme">
-        <a class="navbar-brand js-swap-theme" href="#" onclick="return show('home','home');" data-toggle="tooltip" title="Swap theme">
-          <img src="graphics/brightness_white.png" width="20" height="20" alt="Swap theme">
-        </a>
-      </li-->
-    </ul>
-  </div>
+      <a class="navbar-brand js-swap-theme" href="#" onclick="return show('home','home');" data-toggle="tooltip" title="Swap theme">
+      <img src="graphics/brightness_white.png" width="20" height="20" alt="Swap theme">
+    </a>
+  </li-->
+</ul>
+</div>
 </nav>
 
+
+<!-- body -->
 <body>
 
   <!-- main -->
   <main role="main" class="container">
 
-    <!-- home -->
-    <div class="page collapse show" id="home">
+    <!-- jumbotron -->
+    <div class="jumbotron container-fluid">
 
-      <!-- jumbotron -->
-      <div class="jumbotron container-fluid">
+      <!-- home -->
+      <div class="page collapse show" id="home">
+
         <div class="row">
           <img class="float-left pic-headshot" src="docs/Bryan.jpg" hspace="20"/>
           <div class="float-left header-info">
@@ -126,35 +126,30 @@
 
         <hr />
 
-      <!-- research interests -->
-      <h1>Research Interests</h1>
-      <ul>
-        <li><p>distributed control</p></li>
-        <li><p>multi-agent systems</p></li>
-        <li><p>convex optimization</p></li>
-        <li><p>algorithm design</p></li>
-      </ul>
+        <h1>Research Interests</h1>
+        <ul>
+          <li><p>distributed control</p></li>
+          <li><p>multi-agent systems</p></li>
+          <li><p>convex optimization</p></li>
+          <li><p>algorithm design</p></li>
+        </ul>
 
-      <!-- education -->
-      <h1>Education</h1>
-      <dl>
-        <!--dt>Postdoctoral Researcher at the Wisconsin Institute for Discovery</dt>
-        <dd><p>University of Wisconsin&ndash;Madison, 2017&ndash;present<br />Advisor: <a href="http://www.laurentlessard.com/" target=&ldquo;blank&rdquo;>Laurent Lessard</a></p></dd-->
-        <dt>PhD in Electrical Engineering and Computer Science</dt>
-        <dd><p><a href="http://www.northwestern.edu/" target=&ldquo;blank&rdquo;>Northwestern University</a>, 2012&ndash;2017<br />Advisor: <a href="http://users.eecs.northwestern.edu/~freeman/" target=&ldquo;blank&rdquo;>Randy Freeman</a></p></dd>
-        <dt>MS in Applied Mathematics</dt>
-        <dd><p><a href="http://www.uakron.edu/"  target=&ldquo;blank&rdquo;>University of Akron</a>, 2007&ndash;2012<br />Advisor: <a href="http://www.math.uakron.edu/~jerry/" target=&ldquo;blank&rdquo;>Gerald Young</a></p></dd>
-        <dt>BS in Applied Mathematics</dt>
-        <dd><p><a href="http://www.uakron.edu/"  target=&ldquo;blank&rdquo;>University of Akron</a>, 2007&ndash;2012</p></dd>
-        <dt>BS in Electrical Engineering</dt>
-        <dd><p><a href="http://www.uakron.edu/"  target=&ldquo;blank&rdquo;>University of Akron</a>, 2007&ndash;2012</p></dd>
-      </dl>
+        <h1>Education</h1>
+        <dl>
+          <!--dt>Postdoctoral Researcher at the Wisconsin Institute for Discovery</dt>
+          <dd><p>University of Wisconsin&ndash;Madison, 2017&ndash;present<br />Advisor: <a href="http://www.laurentlessard.com/" target=&ldquo;blank&rdquo;>Laurent Lessard</a></p></dd-->
+          <dt>PhD in Electrical Engineering and Computer Science</dt>
+          <dd><p><a href="http://www.northwestern.edu/" target=&ldquo;blank&rdquo;>Northwestern University</a>, 2012&ndash;2017<br />Advisor: <a href="http://users.eecs.northwestern.edu/~freeman/" target=&ldquo;blank&rdquo;>Randy Freeman</a></p></dd>
+          <dt>MS in Applied Mathematics</dt>
+          <dd><p><a href="http://www.uakron.edu/"  target=&ldquo;blank&rdquo;>University of Akron</a>, 2007&ndash;2012<br />Advisor: <a href="http://www.math.uakron.edu/~jerry/" target=&ldquo;blank&rdquo;>Gerald Young</a></p></dd>
+          <dt>BS in Applied Mathematics</dt>
+          <dd><p><a href="http://www.uakron.edu/"  target=&ldquo;blank&rdquo;>University of Akron</a>, 2007&ndash;2012</p></dd>
+          <dt>BS in Electrical Engineering</dt>
+          <dd><p><a href="http://www.uakron.edu/"  target=&ldquo;blank&rdquo;>University of Akron</a>, 2007&ndash;2012</p></dd>
+        </dl>
 
-    </div>
-
-      <!-- awards -->
-      <!--h1>Awards</h1>
-      <dl>
+        <!--h1>Awards</h1>
+        <dl>
         <dt>Best Electrical Engineering PhD Dissertation</dt>
         <dd><p><a href="http://www.northwestern.edu/" target=&ldquo;blank&rdquo;>Northwestern University</a>, 2017</p></dd>
         <dt>Terminal Year Fellowship (2 quarters)</dt>
@@ -167,209 +162,197 @@
         <dd><p><a href="http://www.uakron.edu/math/"  target=&ldquo;blank&rdquo;>University of Akron Department of Mathematics</a>, 2010</dd>
       </dl>
 
-      <!-- invited talks -->
       <!--h1>Invited Talks</h1>
       <dl>
-        <dt><a href="http://silo.ece.wisc.edu/web/" target=&ldquo;blank&rdquo;>SILO Seminar</a>, <a href="https://www.wisc.edu/" target=&ldquo;blank&rdquo;>University of Wisconsin&mdash;Madison</a></dt>
-        <dd><p>Nov. 2017</p></dd>
-      </dl>
+      <dt><a href="http://silo.ece.wisc.edu/web/" target=&ldquo;blank&rdquo;>SILO Seminar</a>, <a href="https://www.wisc.edu/" target=&ldquo;blank&rdquo;>University of Wisconsin&mdash;Madison</a></dt>
+      <dd><p>Nov. 2017</p></dd>
+    </dl>
 
-      <!-- teaching experience -->
-      <!--h1>Teaching Experience</h1>
-      <dl>
-        <dt>Intro to feedback systems (Northwestern)</dt>
-        <dd><p>Lab instructor, Winter 2012 and 2013 (2 quarters)</p></dd>
+    <!--h1>Teaching Experience</h1>
+    <dl>
+    <dt>Intro to feedback systems (Northwestern)</dt>
+    <dd><p>Lab instructor, Winter 2012 and 2013 (2 quarters)</p></dd>
 
-        <dt>Intermediate Algebra (University of Akron)</dt>
-        <dd><p>Sole instructor, 2011&mdash;2012 (2 semesters)</p></dd>
+    <dt>Intermediate Algebra (University of Akron)</dt>
+    <dd><p>Sole instructor, 2011&mdash;2012 (2 semesters)</p></dd>
 
-        <dt>College Algebra (University of Akron)</dt>
-        <dd><p>Teaching assistant, 2010&mdash;2011 (2 semesters)</p></dd>
-      </dl>
+    <dt>College Algebra (University of Akron)</dt>
+    <dd><p>Teaching assistant, 2010&mdash;2011 (2 semesters)</p></dd>
+  </dl>
 
-      <!-- internships -->
-      <!--h1>Internships</h1>
-      <dl>
-        <dt>BGI, LLC</dt>
-        <dd><p>Summer 2011</p></dd>
+  <!--h1>Internships</h1>
+  <dl>
+  <dt>BGI, LLC</dt>
+  <dd><p>Summer 2011</p></dd>
 
-        <dt>The Will-Burt Company</dt>
-        <dd><p>Summer 2009&mdash;2010</p></dd>
-      </dl>
+  <dt>The Will-Burt Company</dt>
+  <dd><p>Summer 2009&mdash;2010</p></dd>
+</dl>
 
-      <!-- professional activities -->
-      <!--h1>Professional Activities</h1>
-      <dl>
-        <dt>Journal Reviewer:</dt>
-        <dd><p>IEEE Transactions on Automatic Control</p></dd>
-        <dd><p>IEEE Transactions on Control of Networked Systems</p></dd>
-        <dd><p>IEEE Transactions on Cybernetics</p></dd>
+<!--h1>Professional Activities</h1>
+<dl>
+<dt>Journal Reviewer:</dt>
+<dd><p>IEEE Transactions on Automatic Control</p></dd>
+<dd><p>IEEE Transactions on Control of Networked Systems</p></dd>
+<dd><p>IEEE Transactions on Cybernetics</p></dd>
 
-        <dt>Conference Reviewer</dt>
-        <dd><p>IEEE Conference on Decision and Control</p></dd>
-        <dd><p>American Control Conference</p></dd>
-        <dd><p>IFAC Workshop on Distributed Estimation and Control in Networked Systems</p></dd>
+<dt>Conference Reviewer</dt>
+<dd><p>IEEE Conference on Decision and Control</p></dd>
+<dd><p>American Control Conference</p></dd>
+<dd><p>IFAC Workshop on Distributed Estimation and Control in Networked Systems</p></dd>
 
-        <dt>Session co-char, ACC, 2015, "Robust Control II"</dt>
+<dt>Session co-char, ACC, 2015, "Robust Control II"</dt>
 
-        <dt>Member of IEEE</dt>
-      </dl>
+<dt>Member of IEEE</dt>
+</dl>
 
-      <!-- service to community -->
-      <!--h1>Service to Community</h1>
-      <dl>
-        <dt>Inner City Impact</dt>
-        <dd><p>Camp counselor for junior high students</p></dd>
+<!--h1>Service to Community</h1>
+<dl>
+<dt>Inner City Impact</dt>
+<dd><p>Camp counselor for junior high students</p></dd>
 
-        <dt>A Just Harvest</dt>
+<dt>A Just Harvest</dt>
 
-        <dt>Feed My Starving Children</dt>
-      </dl-->
+<dt>Feed My Starving Children</dt>
+</dl-->
+</div>
+<!-- end: home -->
+
+
+<!-- publications -->
+<div class="page collapse" id="publications">
+
+  <h2>Forthcoming Publications</h2>
+  <div id="publications-forthcoming-placeholder">
+  </div>
+  <script>
+  $("#publications-forthcoming-placeholder").load("forthcoming.html");
+  </script>
+
+  <h2>Journal Publications</h2>
+  <div id="publications-journal-placeholder">
+  </div>
+  <script>
+  $("#publications-journal-placeholder").load("journal.html");
+  </script>
+
+  <h2>Peer-Reviewed Conference Proceedings</h2>
+  <div id="publications-conference-placeholder">
+  </div>
+  <script>
+  $("#publications-conference-placeholder").load("conference.html");
+  </script>
+
+  <h2>Doctoral Dissertation</h2>
+  <div id="publications-dissertation-placeholder">
+  </div>
+  <script>
+  $("#publications-dissertation-placeholder").load("dissertation.html");
+  </script>
+
+  <h2>Master's Thesis</h2>
+  <div id="publications-MSthesis-placeholder">
+  </div>
+  <script>
+  $("#publications-MSthesis-placeholder").load("MSthesis.html");
+  </script>
+
+</div>
+<!-- end: publications -->
+
+
+<!-- optimization -->
+<div class="page collapse" id="optimization">
+
+  <h1>Convex Optimization</h1>
+  <p>Consider a function \(f:\mathbb{R}^d\to\mathbb{R}\). Suppose \(f\) is \(L\)-smooth and \(\mu\)-strongly convex with \(0&lt;\mu\leq L\), and let \(x_\star\in\mathbb{R}^d\) denote the unique minimizer of \(f\). Denote the condition ratio of \(f\) as \(\kappa = L/\mu\).</p>
+
+  <!-- triple momentum method -->
+  <div class="infoblock">
+    <div class="blocktitle">Triple Momentum Method</div>
+    <div class="blockcontent">
+      <p>Given initial conditions \(x_{-1},x_0\in\mathbb{R}^d\), the <i>Triple Momentum Method</i> is given by the iteration</p>
+      <p style="text-align:center">
+        \[
+        \begin{aligned}
+        x_{k+1} &amp;= x_k + \beta\,(x_k-x_{k-1}) - \alpha\,\nabla\!f(y_k) \\
+        y_k     &amp;= x_k + \gamma\,(x_k-x_{k-1})
+        \end{aligned}
+        \]
+      </p><p>where the stepsizes are</p>
+      <p style="text-align:center">
+        \[
+        \begin{aligned}
+        \alpha &amp;= \frac{1+\rho}{L}  &amp;
+        \beta  &amp;= \frac{\rho^2}{2-\rho}  &amp;
+        \gamma &amp;= \frac{\rho^2}{(1+\rho)(2-\rho)}
+        \end{aligned}
+        \]
+      </p><p>with \(\rho = 1-1/\sqrt{\kappa}\). The iterate sequence \(\{x_k\}\) converges linearly with rate \(\rho\) to the optimizer. In particular, the bound</p>
+      <p style="text-align:center">
+        \[
+        \|x_k-x_\star\| \leq c\,\rho^k \qquad \text{for }k\geq 1
+        \]
+      </p><p>is satisfied where \(c&gt;0\) is a constant that does not depend on \(k\).</p>
+      <p>For more information, see our <a href="docs/papers/vanscoy2018fastest.pdf" target=&ldquo;blank&rdquo;>paper</a>.</p>
     </div>
-    <!-- home -->
+  </div>
 
-
-    <!-- publications -->
-    <div class="page collapse" id="publications">
-
-      <div class="jumbotron container-fluid">
-
-      <!-- forthcoming publications -->
-      <h2>Forthcoming Publications</h2>
-      <div id="publications-forthcoming-placeholder">
-      </div>
-      <script>
-        $("#publications-forthcoming-placeholder").load("forthcoming.html");
-      </script>
-
-      <!-- journal publications -->
-      <h2>Journal Publications</h2>
-      <div id="publications-journal-placeholder">
-      </div>
-      <script>
-        $("#publications-journal-placeholder").load("journal.html");
-      </script>
-
-      <!-- conference papers -->
-      <h2>Peer-Reviewed Conference Proceedings</h2>
-      <div id="publications-conference-placeholder">
-      </div>
-      <script>
-        $("#publications-conference-placeholder").load("conference.html");
-      </script>
-
-      <!-- doctoral dissertation -->
-      <h2>Doctoral Dissertation</h2>
-      <div id="publications-dissertation-placeholder">
-      </div>
-      <script>
-        $("#publications-dissertation-placeholder").load("dissertation.html");
-      </script>
-
-      <!-- master's thesis -->
-      <h2>Master's Thesis</h2>
-      <div id="publications-MSthesis-placeholder">
-      </div>
-      <script>
-        $("#publications-MSthesis-placeholder").load("MSthesis.html");
-      </script>
-
+  <!-- robust momentum method -->
+  <div class="infoblock">
+    <div class="blocktitle">Robust Momentum Method</div>
+    <div class="blockcontent">
+      <p>Given initial conditions \(x_{-1},x_0\in\mathbb{R}^d\), the <i>Robust Momentum Method</i> is given by the iteration</p>
+      <p style="text-align:center">
+        \[
+        \begin{aligned}
+        x_{k+1} &amp;= x_k + \beta\,(x_k-x_{k-1}) - \alpha\,\nabla\!f(y_k) \\
+        y_k     &amp;= x_k + \gamma\,(x_k-x_{k-1})
+        \end{aligned}
+        \]
+      </p>
+      <p>where the stepsizes are</p>
+      <p style="text-align:center">
+        \[
+        \begin{aligned}
+        \alpha &amp;= \frac{\kappa\,(1-\rho)^2(1+\rho)}{L}  &amp;
+        \beta  &amp;= \frac{\kappa\,\rho^3}{\kappa-1}  &amp;
+        \gamma &amp;= \frac{\rho^3}{(\kappa-1)(1-\rho)^2(1+\rho)}
+        \end{aligned}
+        \]
+      </p><p>with \(\rho\in[1-1/\sqrt{\kappa},1-1/\kappa]\). The iterate sequence \(\{x_k\}\) converges linearly with rate \(\rho\) to the optimizer. In particular, the bound</p>
+      <p style="text-align:center">
+        \[
+        \|x_k-x_\star\| \leq c\,\rho^k \qquad \text{for }k\geq 1
+        \]
+      </p><p>is satisfied where \(c&gt;0\) is a constant that does not depend on \(k\).</p>
+      <p>The parameter \(\rho\) directly controls the worst-case convergence rate of the algorithm. In particular, we have the following:</p>
+      <ul>
+        <li><p>The minimum value is \(\rho = 1-1/\sqrt{\kappa}\). This is the fastest achievable convergence rate, but the resulting algorithm is very fragile to gradient noise. This choice recovers the Triple Momentum Method.</p>
+        </li>
+        <li><p>The maximum value is \(\rho = 1-1/\kappa\). This is the slowest achievable convergence rate, but the resulting algorithm is very robust to gradient noise. This choice recovers the Gradient Method with stepsize \(1/L\).</p>
+        </li>
+      </ul>
+      <p>For more information, see our <a href="docs/papers/cyrus2018robust.pdf" target=&ldquo;blank&rdquo;>paper</a>.</p>
     </div>
-    </div>
-    <!-- publications -->
-
-
-    <!-- optimization -->
-    <div class="page collapse" id="optimization">
-      <div class="jumbotron container-fluid">
-
-      <h1>Convex Optimization</h1>
-      <p>Consider a function \(f:\mathbb{R}^d\to\mathbb{R}\). Suppose \(f\) is \(L\)-smooth and \(\mu\)-strongly convex with \(0&lt;\mu\leq L\), and let \(x_\star\in\mathbb{R}^d\) denote the unique minimizer of \(f\). Denote the condition ratio of \(f\) as \(\kappa = L/\mu\).</p>
-
-      <!-- triple momentum method -->
-      <div class="infoblock">
-        <div class="blocktitle">Triple Momentum Method</div>
-        <div class="blockcontent">
-          <p>Given initial conditions \(x_{-1},x_0\in\mathbb{R}^d\), the <i>Triple Momentum Method</i> is given by the iteration</p>
-          <p style="text-align:center">
-            \[
-            \begin{aligned}
-            x_{k+1} &amp;= x_k + \beta\,(x_k-x_{k-1}) - \alpha\,\nabla\!f(y_k) \\
-            y_k     &amp;= x_k + \gamma\,(x_k-x_{k-1})
-            \end{aligned}
-            \]
-          </p><p>where the stepsizes are</p>
-          <p style="text-align:center">
-            \[
-            \begin{aligned}
-            \alpha &amp;= \frac{1+\rho}{L}  &amp;
-            \beta  &amp;= \frac{\rho^2}{2-\rho}  &amp;
-            \gamma &amp;= \frac{\rho^2}{(1+\rho)(2-\rho)}
-            \end{aligned}
-            \]
-          </p><p>with \(\rho = 1-1/\sqrt{\kappa}\). The iterate sequence \(\{x_k\}\) converges linearly with rate \(\rho\) to the optimizer. In particular, the bound</p>
-          <p style="text-align:center">
-            \[
-            \|x_k-x_\star\| \leq c\,\rho^k \qquad \text{for }k\geq 1
-            \]
-          </p><p>is satisfied where \(c&gt;0\) is a constant that does not depend on \(k\).</p>
-          <p>For more information, see our <a href="docs/papers/vanscoy2018fastest.pdf" target=&ldquo;blank&rdquo;>paper</a>.</p>
-        </div></div>
-
-        <div class="infoblock">
-          <div class="blocktitle">Robust Momentum Method</div>
-          <div class="blockcontent">
-            <p>Given initial conditions \(x_{-1},x_0\in\mathbb{R}^d\), the <i>Robust Momentum Method</i> is given by the iteration</p>
-            <p style="text-align:center">
-              \[
-              \begin{aligned}
-              x_{k+1} &amp;= x_k + \beta\,(x_k-x_{k-1}) - \alpha\,\nabla\!f(y_k) \\
-              y_k     &amp;= x_k + \gamma\,(x_k-x_{k-1})
-              \end{aligned}
-              \]
-            </p>
-            <p>where the stepsizes are</p>
-            <p style="text-align:center">
-              \[
-              \begin{aligned}
-              \alpha &amp;= \frac{\kappa\,(1-\rho)^2(1+\rho)}{L}  &amp;
-              \beta  &amp;= \frac{\kappa\,\rho^3}{\kappa-1}  &amp;
-              \gamma &amp;= \frac{\rho^3}{(\kappa-1)(1-\rho)^2(1+\rho)}
-              \end{aligned}
-              \]
-            </p><p>with \(\rho\in[1-1/\sqrt{\kappa},1-1/\kappa]\). The iterate sequence \(\{x_k\}\) converges linearly with rate \(\rho\) to the optimizer. In particular, the bound</p>
-            <p style="text-align:center">
-              \[
-              \|x_k-x_\star\| \leq c\,\rho^k \qquad \text{for }k\geq 1
-              \]
-            </p><p>is satisfied where \(c&gt;0\) is a constant that does not depend on \(k\).</p>
-            <p>The parameter \(\rho\) directly controls the worst-case convergence rate of the algorithm. In particular, we have the following:</p>
-            <ul>
-              <li><p>The minimum value is \(\rho = 1-1/\sqrt{\kappa}\). This is the fastest achievable convergence rate, but the resulting algorithm is very fragile to gradient noise. This choice recovers the Triple Momentum Method.</p>
-              </li>
-              <li><p>The maximum value is \(\rho = 1-1/\kappa\). This is the slowest achievable convergence rate, but the resulting algorithm is very robust to gradient noise. This choice recovers the Gradient Method with stepsize \(1/L\).</p>
-              </li>
-            </ul>
-            <p>For more information, see our <a href="docs/papers/cyrus2018robust.pdf" target=&ldquo;blank&rdquo;>paper</a>.</p>
-          </div>
-        </div>
-        <h1>Code</h1>
-        <p>We can also analyze the worst-case linear convergence rate of various algorithms numerically. For example, the following code calculates the worst-case linear convergence rate of the following methods when applied to an \(L\)-smooth \(\mu\)-strongly convex function:</p>
-        <ul>
-          <li><p>Gradient method with step-size \(1/L\)</p>
-          </li>
-          <li><p>Gradient method with step-size \(2/(L+\mu)\)</p>
-          </li>
-          <li><p>Heavy-ball method</p>
-          </li>
-          <li><p>Fast gradient method</p>
-          </li>
-          <li><p>Triple momentum method</p>
-          </li>
-        </ul>
-        <div class="codeblock">
-          <div class="blockcontent">
-            <pre>
+  </div>
+  <h1>Code</h1>
+  <p>We can also analyze the worst-case linear convergence rate of various algorithms numerically. For example, the following code calculates the worst-case linear convergence rate of the following methods when applied to an \(L\)-smooth \(\mu\)-strongly convex function:</p>
+  <ul>
+    <li><p>Gradient method with step-size \(1/L\)</p>
+    </li>
+    <li><p>Gradient method with step-size \(2/(L+\mu)\)</p>
+    </li>
+    <li><p>Heavy-ball method</p>
+    </li>
+    <li><p>Fast gradient method</p>
+    </li>
+    <li><p>Triple momentum method</p>
+    </li>
+  </ul>
+  <div class="codeblock">
+    <div class="blockcontent">
+      <pre>
 mu = 1;   % strong convexity parameter
 L  = 10;  % Lipschitz parameter of gradient
 
@@ -383,153 +366,168 @@ FixedStepMethod(mu,L);
 %           HBM : 0.8602
 %           FGM : 0.7518
 %           TMM : 0.6838</pre>
-          </div>
-        </div>
-        <p>For more information, including the analysis of the gradient and heavy-ball methods with subspace searches and the fast gradient method with fixed restart, see our <a href="docs/papers/taylor2018lyapunov.pdf" target=&ldquo;blank&rdquo;>paper</a> and our <a href="https://github.com/QCGroup/quad-lyap-first-order" target=&ldquo;blank&rdquo;>code</a>.</p>
       </div>
     </div>
+    <p>For more information, including the analysis of the gradient and heavy-ball methods with subspace searches and the fast gradient method with fixed restart, see our <a href="docs/papers/taylor2018lyapunov.pdf" target=&ldquo;blank&rdquo;>paper</a> and our <a href="https://github.com/QCGroup/quad-lyap-first-order" target=&ldquo;blank&rdquo;>code</a>.</p>
   </div>
-  </div>
-  <!-- optimization -->
+  <!-- end: optimization -->
 
 
 
   <!-- multi-agent systems -->
   <div class="page collapse" id="multi-agent">
-    <div class="jumbotron container-fluid">
     <h1>Dynamic Average Consensus</h1>
 
     <p>Consider a group of \(n\) agents connected in a network. Suppose the network is constant, connected, and undirected, and let \(L\) be the weighted Laplacian matrix corresponding to the weighted adjacency matrix \([a_{ij}]\). Denote the minimum and maximum nonzero eigenvalues of \(L\) as \(\lambda_\text{min}\) and \(\lambda_\text{max}\), respectively. Also, define the corresponding condition ratio \(\kappa = \lambda_\text{max}/\lambda_\text{min}\).</p>
     <p>Suppose each agent \(i\in\{1,\ldots,n\}\) has a discrete-time input signal \(\{u_k^i\}\), and denote the average signal \(u_k^\text{avg} = \frac{1}{n}\sum_{i=1}^n u_k^i\).</p>
     <p>Each of the following algorithms is designed such that each agent tracks the global average \(u_k^\text{avg}\) with zero steady-state error when the input signals are constant. If the input signals are
-    slowly time-varying, then the agents track the average with small steady-state error.</p>
-    <p>For more information, see our <a href="docs/papers/kia2018tutorial.pdf" target=&ldquo;blank&rdquo;>tutorial paper</a>.</p>
-    <h3>Non-Robust Estimators</h3>
-    <p>First, consider the following integral estimators. The first estimator is comparable to gradient descent, while the second is comparable to the heavy-ball method in optimization.</p>
-    <div class="infoblock">
-      <div class="blocktitle">Integral Estimator</div>
-      <div class="blockcontent">
-        <p>Given initial conditions \(p_0^i\in\mathbb{R}\) for \(i\in\{1,\ldots,n\}\), the <i>Accelerated Integral Estimator</i> is given by the iteration</p>
-        <p style="text-align:center">
-          \[
-          \begin{aligned}
-          p_{k+1}^i &amp;= p_k^i + k_I \sum_{j=1}^n a_{ij}\,(x_k^i-x_k^j) \\
-          x_k^i     &amp;= u_k^i - p_k^i
-          \end{aligned}
-          \]
-        </p><p>where the stepsizes are</p>
-        <p style="text-align:center">
-          \[
-          \begin{aligned}
-          k_I  &amp;= \frac{2}{\lambda_\text{max}+\lambda_\text{min}}  &amp;  &amp;\text{and}  &amp;
-          \rho &amp;= \frac{\kappa-1}{\kappa+1}.
-          \end{aligned}
-          \]
-        </p><p>For each agent \(i\in\{1,\ldots,n\}\), the iterate sequence \(\{x_k^i\}\) converges linearly with rate \(\rho\) to the average signal \(u_k^\text{avg}\) if the input signals \(\{u_k^i\}\) are constant and the initial conditions satisfy \(\sum_{i=1}^n p_0^i = 0\).</p>
+      slowly time-varying, then the agents track the average with small steady-state error.</p>
+      <p>For more information, see our <a href="docs/papers/kia2018tutorial.pdf" target=&ldquo;blank&rdquo;>tutorial paper</a>.</p>
+      <h3>Non-Robust Estimators</h3>
+      <p>First, consider the following integral estimators. The first estimator is comparable to gradient descent, while the second is comparable to the heavy-ball method in optimization.</p>
+      <div class="infoblock">
+        <div class="blocktitle">Integral Estimator</div>
+        <div class="blockcontent">
+          <p>Given initial conditions \(p_0^i\in\mathbb{R}\) for \(i\in\{1,\ldots,n\}\), the <i>Accelerated Integral Estimator</i> is given by the iteration</p>
+          <p style="text-align:center">
+            \[
+            \begin{aligned}
+            p_{k+1}^i &amp;= p_k^i + k_I \sum_{j=1}^n a_{ij}\,(x_k^i-x_k^j) \\
+            x_k^i     &amp;= u_k^i - p_k^i
+            \end{aligned}
+            \]
+          </p><p>where the stepsizes are</p>
+          <p style="text-align:center">
+            \[
+            \begin{aligned}
+            k_I  &amp;= \frac{2}{\lambda_\text{max}+\lambda_\text{min}}  &amp;  &amp;\text{and}  &amp;
+            \rho &amp;= \frac{\kappa-1}{\kappa+1}.
+            \end{aligned}
+            \]
+          </p><p>For each agent \(i\in\{1,\ldots,n\}\), the iterate sequence \(\{x_k^i\}\) converges linearly with rate \(\rho\) to the average signal \(u_k^\text{avg}\) if the input signals \(\{u_k^i\}\) are constant and the initial conditions satisfy \(\sum_{i=1}^n p_0^i = 0\).</p>
+        </div>
+      </div>
+      <div class="infoblock">
+        <div class="blocktitle">Accelerated Integral Estimator</div>
+        <div class="blockcontent">
+          <p>Given initial conditions \(p_{-1}^i,p_0^i\in\mathbb{R}\) for \(i\in\{1,\ldots,n\}\), the <i>Integral Estimator</i> is given by the iteration</p>
+          <p style="text-align:center">
+            \[
+            \begin{aligned}
+            p_{k+1}^i &amp;= p_k^i + \rho^2\,(p_k^i-p_{k-1}^i) + k_I \sum_{j=1}^n a_{ij}\,(x_k^i-x_k^j) \\
+            x_k^i     &amp;= u_k^i - p_k^i
+            \end{aligned}
+            \]
+          </p><p>where the stepsizes are</p>
+          <p style="text-align:center">
+            \[
+            \begin{aligned}
+            k_I  &amp;= \frac{4}{(\sqrt{\lambda_\text{max}}+\sqrt{\lambda_\text{min}})^2}  &amp;  &amp;\text{and}  &amp;
+            \rho &amp;= \frac{\sqrt{\kappa}-1}{\sqrt{\kappa}+1}.
+            \end{aligned}
+            \]
+          </p><p>For each agent \(i\in\{1,\ldots,n\}\), the iterate sequence \(\{x_k^i\}\) converges linearly with rate \(\rho\) to the average signal \(u_k^\text{avg}\) if the input signals \(\{u_k^i\}\) are constant and the initial conditions satisfy \(\sum_{i=1}^n p_{-1}^i = 0\) and \(\sum_{i=1}^n p_0^i = 0\).</p>
+        </div>
+      </div>
+      <h3>Robust Estimators</h3>
+      <p>Both of the previous estimators require correct initialization. In situations where this is undesired, we can instead use estimators which are <i>robust to initial conditions</i>, meaning that the steady-state error is independent of the initial conditions.</p>
+      <div class="infoblock">
+        <div class="blocktitle">Proportional Integral Estimator</div>
+        <div class="blockcontent">
+          <p>Given initial conditions \(p_0^i,q_0^i\in\mathbb{R}\) for \(i\in\{1,\ldots,n\}\), the <i>Proportional Integral Estimator</i> is given by the iteration</p>
+          <p style="text-align:center">
+            \[
+            \begin{aligned}
+            q_{k+1}^i &amp;= \gamma\,q_k^i + k_p \sum_{j=1}^n a_{ij}\,\bigl((x_k^i-x_k^j)+(p_k^i-p_k^j)\bigr) \\
+            p_{k+1}^i &amp;= p_k^i + k_I \sum_{j=1}^n a_{ij}\,(x_k^i-x_k^j) \\
+            x_k^i     &amp;= u_k^i - q_k^i
+            \end{aligned}
+            \]
+          </p>
+          <p>where the stepsizes are</p>
+          <p style="text-align:center">
+            \[
+            \begin{aligned}
+            k_I  &amp;= \frac{1-\rho}{\lambda_\text{min}}  &amp;
+            k_p  &amp;= \frac{\rho\,(1-\rho)}{\kappa\,(\lambda_\text{min}-(1-\rho)\,\lambda_\text{max})}
+            \end{aligned}
+            \]
+          </p>
+          <p>and the convergence rate is</p>
+          <p style="text-align:center">
+            \[
+            \begin{aligned}
+            \rho = \begin{cases} \rho_1, &amp; 1\leq \kappa\leq (3+\sqrt{5})/4 \\
+            \rho_2, &amp; (3+\sqrt{5})/4\leq \kappa \end{cases}
+            \end{aligned}
+            \]
+          </p>
+          <p>with</p>
+          <p style="text-align:center">
+            \[
+            \begin{aligned}
+            \rho_1 &amp;= \frac{\sqrt{(\kappa-1)(4\kappa^3+5\kappa-1)} - (\kappa-1)}{2\,(\kappa^2+1)} \\
+            \rho_2 &amp;= \frac{8\kappa^2-8\kappa+1}{8\kappa^2-1}.
+            \end{aligned}
+            \]
+          </p><p>For each agent \(i\in\{1,\ldots,n\}\), the iterate sequence \(\{x_k^i\}\) converges linearly with rate \(\rho\) to the average signal \(u_k^\text{avg}\) if the input signals \(\{u_k^i\}\) are constant.</p>
+          <p>For more information, see our <a href="docs/papers/vanscoy2015design.pdf" target=&ldquo;blank&rdquo;>paper</a>.</p>
+        </div>
+      </div>
+      <div class="infoblock">
+        <div class="blocktitle">Accelerated Proportional Integral Estimator</div>
+        <div class="blockcontent">
+          <p>Given initial conditions \(p_{-1}^i,p_0^i,q_{-1}^i,q_0^i\in\mathbb{R}\) for \(i\in\{1,\ldots,n\}\), the <i>Accelerated Proportional Integral Estimator</i> is given by the iteration</p>
+          <p style="text-align:center">
+            \[
+            \begin{aligned}
+            q_{k+1}^i &amp;= 2\,\rho\,q_k^i - \rho^2\,q_{k-1}^i + k_p \sum_{j=1}^n a_{ij}\,\bigl((x_k^i-x_k^j)+(p_k^i-p_k^j)\bigr) \\
+            p_{k+1}^i &amp;= (1+\rho^2)\,p_k^i - \rho^2\,p_{k-1}^i + k_I \sum_{j=1}^n a_{ij}\,(x_k^i-x_k^j) \\
+            x_k^i     &amp;= u_k^i - q_k^i
+            \end{aligned}
+            \]
+          </p>
+          <p>where the stepsizes are</p>
+          <p style="text-align:center">
+            \[
+            \begin{aligned}
+            k_I  &amp;= \frac{(1-\rho)^2}{\lambda_\text{min}}  &amp;
+            k_p  &amp;= \beta\,k_I  &amp;
+            \end{aligned}
+            \]
+          </p>
+          <p>and the convergence rate is</p>
+          <p style="text-align:center">
+            \[
+            \begin{aligned}
+            \rho = \begin{cases} \rho_1, &amp; 1\leq \kappa\leq (1+\sqrt{2})/2 \\
+            \rho_2, &amp; (1+\sqrt{2})/2\leq \kappa \end{cases}
+            \end{aligned}
+            \]
+          </p>
+          <p>with</p>
+          <p style="text-align:center">
+            \[
+            \begin{aligned}
+            \rho_1 &amp;= \frac{1-\beta-2\,(1-\sqrt{\beta})}{1-\beta} \\
+            \rho_2 &amp;= \frac{4-\beta+4\,(1-\sqrt{4-\beta})}{\beta}
+            \end{aligned}
+            \]
+          </p><p>where \(\beta = 2+(2\sqrt{\kappa\,(\kappa-1)}-1)/\kappa\).</p>
+          <p>For each agent \(i\in\{1,\ldots,n\}\), the iterate sequence \(\{x_k^i\}\) converges linearly with rate \(\rho\) to the average signal \(u_k^\text{avg}\) if the input signals \(\{u_k^i\}\) are constant.</p>
+          <p>For more information, see our <a href="docs/papers/vanscoy2015design.pdf" target=&ldquo;blank&rdquo;>paper</a>.</p>
+        </div>
+      </div>
+      <h2>Summary</h2>
+      <p>The following figure plots the number of iterations to converge as a function of the condition ratio of the graph Laplacian for each of the four algorithms. The integral estimator converges faster than the corresponding proportional integral estimator (both non-accelerated and accelerated versions). However, the proportional integral estimator is <i>robust to initial conditions</i>. Such algorithms can adapt to changes in the communication graph which may occur due to dropped packets, or if the agents are mobile and have a limited communication range.</p>
+      <div class="row text-center">
+        <img class="img-fluid img-dac-iter" src="graphics/DAC_iter.png" alt="Iterations to converge">
       </div>
     </div>
-    <div class="infoblock">
-      <div class="blocktitle">Accelerated Integral Estimator</div>
-      <div class="blockcontent">
-        <p>Given initial conditions \(p_{-1}^i,p_0^i\in\mathbb{R}\) for \(i\in\{1,\ldots,n\}\), the <i>Integral Estimator</i> is given by the iteration</p>
-        <p style="text-align:center">
-          \[
-          \begin{aligned}
-          p_{k+1}^i &amp;= p_k^i + \rho^2\,(p_k^i-p_{k-1}^i) + k_I \sum_{j=1}^n a_{ij}\,(x_k^i-x_k^j) \\
-          x_k^i     &amp;= u_k^i - p_k^i
-          \end{aligned}
-          \]
-        </p><p>where the stepsizes are</p>
-        <p style="text-align:center">
-          \[
-          \begin{aligned}
-          k_I  &amp;= \frac{4}{(\sqrt{\lambda_\text{max}}+\sqrt{\lambda_\text{min}})^2}  &amp;  &amp;\text{and}  &amp;
-          \rho &amp;= \frac{\sqrt{\kappa}-1}{\sqrt{\kappa}+1}.
-          \end{aligned}
-          \]
-        </p><p>For each agent \(i\in\{1,\ldots,n\}\), the iterate sequence \(\{x_k^i\}\) converges linearly with rate \(\rho\) to the average signal \(u_k^\text{avg}\) if the input signals \(\{u_k^i\}\) are constant and the initial conditions satisfy \(\sum_{i=1}^n p_{-1}^i = 0\) and \(\sum_{i=1}^n p_0^i = 0\).</p>
-      </div>
-    </div>
-    <h3>Robust Estimators</h3>
-    <p>Both of the previous estimators require correct initialization. In situations where this is undesired, we can instead use estimators which are <i>robust to initial conditions</i>, meaning that the steady-state error is independent of the initial conditions.</p>
-    <div class="infoblock">
-      <div class="blocktitle">Proportional Integral Estimator</div>
-      <div class="blockcontent">
-        <p>Given initial conditions \(p_0^i,q_0^i\in\mathbb{R}\) for \(i\in\{1,\ldots,n\}\), the <i>Proportional Integral Estimator</i> is given by the iteration</p>
-        <p style="text-align:center">
-          \[
-          \begin{aligned}
-          q_{k+1}^i &amp;= \gamma\,q_k^i + k_p \sum_{j=1}^n a_{ij}\,\bigl((x_k^i-x_k^j)+(p_k^i-p_k^j)\bigr) \\
-          p_{k+1}^i &amp;= p_k^i + k_I \sum_{j=1}^n a_{ij}\,(x_k^i-x_k^j) \\
-          x_k^i     &amp;= u_k^i - q_k^i
-          \end{aligned}
-          \]
-        </p><p>where the stepsizes are</p>
-        <p style="text-align:center">
-          \[
-          \begin{aligned}
-          k_I  &amp;= \frac{1-\rho}{\lambda_\text{min}}  &amp;
-          k_p  &amp;= \frac{\rho\,(1-\rho)}{\kappa\,(\lambda_\text{min}-(1-\rho)\,\lambda_\text{max})}  &amp;
-          \rho &amp;= \begin{cases} \rho_1, &amp; 1\leq \kappa\leq (3+\sqrt{5})/4 \\
-          \rho_2, &amp; (3+\sqrt{5})/4\leq \kappa \end{cases}
-          \end{aligned}
-          \]
-        </p><p>with</p>
-        <p style="text-align:center">
-          \[
-          \begin{aligned}
-          \rho_1 &amp;= \frac{\sqrt{(\kappa-1)(4\kappa^3+5\kappa-1)} - (\kappa-1)}{2\,(\kappa^2+1)} \\
-          \rho_2 &amp;= \frac{8\kappa^2-8\kappa+1}{8\kappa^2-1}.
-          \end{aligned}
-          \]
-        </p><p>For each agent \(i\in\{1,\ldots,n\}\), the iterate sequence \(\{x_k^i\}\) converges linearly with rate \(\rho\) to the average signal \(u_k^\text{avg}\) if the input signals \(\{u_k^i\}\) are constant.</p>
-        <p>For more information, see our <a href="docs/papers/vanscoy2015design.pdf" target=&ldquo;blank&rdquo;>paper</a>.</p>
-      </div>
-    </div>
-    <div class="infoblock">
-      <div class="blocktitle">Accelerated Proportional Integral Estimator</div>
-      <div class="blockcontent">
-        <p>Given initial conditions \(p_{-1}^i,p_0^i,q_{-1}^i,q_0^i\in\mathbb{R}\) for \(i\in\{1,\ldots,n\}\), the <i>Accelerated Proportional Integral Estimator</i> is given by the iteration</p>
-        <p style="text-align:center">
-          \[
-          \begin{aligned}
-          q_{k+1}^i &amp;= 2\,\rho\,q_k^i - \rho^2\,q_{k-1}^i + k_p \sum_{j=1}^n a_{ij}\,\bigl((x_k^i-x_k^j)+(p_k^i-p_k^j)\bigr) \\
-          p_{k+1}^i &amp;= (1+\rho^2)\,p_k^i - \rho^2\,p_{k-1}^i + k_I \sum_{j=1}^n a_{ij}\,(x_k^i-x_k^j) \\
-          x_k^i     &amp;= u_k^i - q_k^i
-          \end{aligned}
-          \]
-        </p><p>where the stepsizes are</p>
-        <p style="text-align:center">
-          \[
-          \begin{aligned}
-          k_I  &amp;= \frac{(1-\rho)^2}{\lambda_\text{min}}  &amp;
-          k_p  &amp;= \beta\,k_I  &amp;
-          \rho &amp;= \begin{cases} \rho_1, &amp; 1\leq \kappa\leq (1+\sqrt{2})/2 \\
-          \rho_2, &amp; (1+\sqrt{2})/2\leq \kappa \end{cases}
-          \end{aligned}
-          \]
-        </p><p>with</p>
-        <p style="text-align:center">
-          \[
-          \begin{aligned}
-          \rho_1 &amp;= \frac{1-\beta-2\,(1-\sqrt{\beta})}{1-\beta} \\
-          \rho_2 &amp;= \frac{4-\beta+4\,(1-\sqrt{4-\beta})}{\beta}
-          \end{aligned}
-          \]
-        </p><p>where \(\beta = 2+(2\sqrt{\kappa\,(\kappa-1)}-1)/\kappa\).</p>
-        <p>For each agent \(i\in\{1,\ldots,n\}\), the iterate sequence \(\{x_k^i\}\) converges linearly with rate \(\rho\) to the average signal \(u_k^\text{avg}\) if the input signals \(\{u_k^i\}\) are constant.</p>
-        <p>For more information, see our <a href="docs/papers/vanscoy2015design.pdf" target=&ldquo;blank&rdquo;>paper</a>.</p>
-      </div>
-    </div>
-    <h2>Summary</h2>
-    <p>The following figure plots the number of iterations to converge as a function of the condition ratio of the graph Laplacian for each of the four algorithms. The integral estimator converges faster than the corresponding proportional integral estimator (both non-accelerated and accelerated versions). However, the proportional integral estimator is <i>robust to initial conditions</i>. Such algorithms can adapt to changes in the communication graph which may occur due to dropped packets, or if the agents are mobile and have a limited communication range.</p>
-    <div class="row text-center">
-      <img class="img-fluid img-dac-iter" src="graphics/DAC_iter.png" alt="Iterations to converge">
-    </div>
-</div>
-</div>
-  <!-- multi-agent systems -->
+    <!-- end: multi-agent systems -->
 
+  </div>
+  <!-- end: jumbotron -->
 
 </main>
 
