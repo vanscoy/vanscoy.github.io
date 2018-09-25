@@ -162,17 +162,20 @@ nav.navbar {
 	background: var(--color-navbar);
 	padding-top: 0px;
 }
-nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link {
+nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:link {
 	color: var(--color-navbar-link);
 	padding-top: 15px;
 	font-size: 105%;
 }
+nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:hover {
+	color: var(--color-navbar-link-hover);
+}
+nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:visited {
+	color: var(--color-navbar-link);
+}
 nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link.active {
 	color: var(--color-navbar-link-active);
 	font-weight: bold;
-}
-nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:hover {
-	color: var(--color-navbar-link-hover);
 }
 nav.navbar a.navbar-brand {
 	color: var(--color-navbar-brand);
@@ -180,10 +183,16 @@ nav.navbar a.navbar-brand {
 	font: 250% Palatino;
 	font-weight: bold;
 }
+nav.navbar a.navbar-brand:link {
+	color: var(--color-navbar-brand);
+}
 nav.navbar a.navbar-brand:visited {
 	color: var(--color-navbar-brand);
 }
 nav.navbar a.navbar-brand:hover {
+	color: var(--color-navbar-brand);
+}
+nav.navbar a.navbar-brand.active {
 	color: var(--color-navbar-brand);
 }
 nav.navbar button.navbar-toggler {
