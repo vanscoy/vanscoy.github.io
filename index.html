@@ -30,14 +30,23 @@
   <script type="text/x-mathjax-config">
   MathJax.Hub.Config({ "HTML-CSS": { fonts: ["TeX"] } });  /*STIX*/
   </script>
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-AMS_HTML">
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-AMS_HTML">
   </script>
 
   <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
   <!-- custom functions -->
   <script src="js/vanscoy.js"></script>
+
+  <!-- publications -->
+  <script>
+  $("#publications-forthcoming-placeholder").load("forthcoming.html");
+  $("#publications-journal-placeholder").load("publications/journal.html");
+  $("#publications-conference-placeholder").load("publications/conference.html");
+  $("#publications-dissertation-placeholder").load("publications/dissertation.html");
+  $("#publications-MSthesis-placeholder").load("publications/MSthesis.html");
+  </script>
 
 </head>
 
@@ -232,37 +241,22 @@
   <h2>Forthcoming Publications</h2>
   <div id="publications-forthcoming-placeholder">
   </div>
-  <script>
-  $("#publications-forthcoming-placeholder").load("forthcoming.html");
-  </script>
 
   <h2>Journal Publications</h2>
   <div id="publications-journal-placeholder">
   </div>
-  <script>
-  $("#publications-journal-placeholder").load("journal.html");
-  </script>
 
   <h2>Peer-Reviewed Conference Proceedings</h2>
   <div id="publications-conference-placeholder">
   </div>
-  <script>
-  $("#publications-conference-placeholder").load("conference.html");
-  </script>
 
   <h2>Doctoral Dissertation</h2>
   <div id="publications-dissertation-placeholder">
   </div>
-  <script>
-  $("#publications-dissertation-placeholder").load("dissertation.html");
-  </script>
 
   <h2>Master's Thesis</h2>
   <div id="publications-MSthesis-placeholder">
   </div>
-  <script>
-  $("#publications-MSthesis-placeholder").load("MSthesis.html");
-  </script>
 
 </div>
 <!-- end: publications -->
