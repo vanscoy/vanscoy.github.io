@@ -12,7 +12,8 @@ body {
 	font-family: Verdana;
   margin-left: 5px;
   margin-right: 5px;
-	margin-top: 1em;
+  margin-top: 1em;
+  font-size: 85%;
 }
 body p {
 	color: var(--color-text);
@@ -52,7 +53,7 @@ h1, h2, h3 {
 	border: none;
 }
 
-#postdoc-researcher {
+.postdoc {
 	font-size: 180%;
 	font-weight: bold;
 	/* color: var(--color-h2); */
@@ -161,6 +162,9 @@ nav.navbar {
 	background: var(--color-navbar);
 	padding-top: 0px;
 }
+nav.navbar button.navbar-toggler {
+  display: none;
+}
 nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:link {
 	color: var(--color-navbar-link);
 	padding-top: 15px;
@@ -217,7 +221,7 @@ nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link::before {
 	padding: 1em 1em 0.25em 1em; /*top right bottom left*/
   background: var(--color-background-jumbotron);
   max-width: 1200px;
-  min-width: 400px;
+  min-width: 360px;
 }
 /* .jumbotron .header-info {
 	min-width: 150px;
@@ -316,28 +320,28 @@ div.expanded {
  /*************************************
    customization for large/small devices
  *************************************/
+ 
+.short-text { display: none; }
+
 /* small devices */
 @media (max-width: 767.98px) {
-  body {font-size: 60%;}
+  body {font-size: 70%;}
   nav.navbar button.navbar-toggler {
     display: block;
   }
 
   .pic-headshot {
     max-height: 125px; /*200px;*/
+    margin-top: 5px;
   }
-  #postdoc-researcher {
+  .postdoc {
     margin-top: 0px;
+    font-size: 160%;
   }
   .pic-research {
     max-width: 75px; /* 150 */
     margin: 0px 20px 10px 0px;
   }
-}
-/* large devices */
-@media (min-width: 768px) {
-  body {font-size: 85%;}
-  nav.navbar button.navbar-toggler {
-    display: none;
-  }
+  .short-text { display: block; }
+  .full-text { display: none; }
 }
