@@ -3,25 +3,6 @@
  *************************************/
 @import url("defaulttheme.css");
 
-/* small devices */
-@media (max-width: 767.98px) {
-  body {font-size: 60%;}
-	nav.navbar button.navbar-toggler {display: block;}
-	.jumbotron {
-		min-width: 430px;
-		margin-left: -25px;
-		margin-top: -15px;
-	}
-}
-/* large devices */
-@media (min-width: 768px) {
-  body {font-size: 85%;}
-	nav.navbar button.navbar-toggler {display: none;}
-	.jumbotron {
-		max-width: 1000px;
-	}
-}
-
 /*************************************
    body
  *************************************/
@@ -29,7 +10,8 @@ body {
 	padding-top: 65px;  /* add padding to the top for navbar */
 	background: var(--color-background);
 	font-family: Verdana;
-	margin-left: 2em;
+  margin-left: 5px;
+  margin-right: 5px;
 	margin-top: 1em;
 }
 body p {
@@ -39,22 +21,28 @@ body, p {
 	line-height: 1.5em;
 	margin-bottom: 1.2em;
 }
+div.page {
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
 
 /*************************************
    headers
  *************************************/
 h1 {
-	font-size: 155%;
+	font-size: 170%;
 	font-weight: bold;
 	color: var(--color-h1);
 }
 h2 {
-	font-size: 160%;
+	font-size: 130%;
 	font-weight: bold;
 	color: var(--color-h2);
 }
 h3 {
-	font-size: 140%;
+	font-size: 120%;
 	font-weight: bold;
 	color: var(--color-h3);
 	padding-top: 10px;
@@ -65,9 +53,9 @@ h1, h2, h3 {
 }
 
 #postdoc-researcher {
-	font-size: 170%;
+	font-size: 180%;
 	font-weight: bold;
-	color: var(--color-h2);
+	/* color: var(--color-h2); */
 	margin-bottom: 0px;
 	margin-top: 20px;
 }
@@ -78,17 +66,28 @@ h1, h2, h3 {
 	padding-top: 15px;
 	margin-bottom: 0px;
 }
-
 hr {
 	border-width: 2px;
 	border-color: black;
 }
 
 /*************************************
-   bullet
+   bullet list
  *************************************/
-li {
+ li{
 	color: var(--color-bullet);
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+li:first-child {
+    margin-top: 10px;
+}
+li:last-child {
+    margin-bottom: 25px;
+}
+li.nav-item {
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 /*************************************
@@ -165,7 +164,8 @@ nav.navbar {
 nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:link {
 	color: var(--color-navbar-link);
 	padding-top: 15px;
-	font-size: 105%;
+	font-size: 115%;
+	text-align: center;
 }
 nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:hover {
 	color: var(--color-navbar-link-hover);
@@ -199,16 +199,29 @@ nav.navbar button.navbar-toggler {
 	background: var(--color-navbar-link);
 }
 
+/* insert invisible bold text in navbar so that it does not move when the page is selected */
+nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link::before {
+	display: block;
+	content: attr(title);
+	font-weight: bold;
+	height: 1px;
+	color: transparent;
+	overflow: hidden;
+	visibility: hidden;
+}
+
 /*************************************
    jumbotron
  *************************************/
 .jumbotron {
-	padding: 1em 1.3em 0.25em 1.3em; /*top right bottom left*/
-	background: var(--color-background-jumbotron);
+	padding: 1em 1em 0.25em 1em; /*top right bottom left*/
+  background: var(--color-background-jumbotron);
+  max-width: 1200px;
+  min-width: 400px;
 }
-.jumbotron .header-info {
-	/*min-width: 150px;*/
-}
+/* .jumbotron .header-info {
+	min-width: 150px;
+} */
 
 /*************************************
    blocktitle
@@ -286,4 +299,45 @@ div.codeblock + p {
 }
 .pic-headshot {
 	max-height: 200px; /*160px;*/
+}
+.pic-research {
+	max-width: 150px;
+	margin: 0px 20px 10px 0px;
+}
+div.research-project {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+div.expanded {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+ /*************************************
+   customization for large/small devices
+ *************************************/
+/* small devices */
+@media (max-width: 767.98px) {
+  body {font-size: 60%;}
+  nav.navbar button.navbar-toggler {
+    display: block;
+  }
+
+  .pic-headshot {
+    max-height: 125px; /*200px;*/
+  }
+  #postdoc-researcher {
+    margin-top: 0px;
+  }
+  .pic-research {
+    max-width: 75px; /* 150 */
+    margin: 0px 20px 10px 0px;
+  }
+}
+/* large devices */
+@media (min-width: 768px) {
+  body {font-size: 85%;}
+  nav.navbar button.navbar-toggler {
+    display: none;
+  }
 }

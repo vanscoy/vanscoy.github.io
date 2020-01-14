@@ -35,8 +35,22 @@ $(function(){
   var navMain = $(".navbar-collapse");
 
   navMain.on("click", "a", null, function () {
-    if (!$(this).hasClass('research')) {
-      $(".navbar-collapse").collapse('hide');
-    }
+    $(".navbar-collapse").collapse('hide');
   });
 });
+
+// Toggle visibility of element with given id
+function toggle_visibility(pageid,buttonid) {
+  var p = document.getElementById(pageid);
+  var b = document.getElementById(buttonid);
+  if (p.style.display == 'block')
+  {
+    p.style.display = 'none';
+    b.innerHTML = "[more]";
+  }
+  else
+  {
+     p.style.display = 'block';
+     b.innerHTML = "[less]";
+  }
+}
