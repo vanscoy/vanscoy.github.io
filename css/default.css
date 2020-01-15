@@ -7,7 +7,7 @@
    body
  *************************************/
 body {
-	padding-top: 65px;  /* add padding to the top for navbar */
+	padding-top: 60px;  /* add padding to the top for navbar */
 	background: var(--color-background);
 	font-family: Verdana;
   margin-left: 0px;
@@ -221,7 +221,7 @@ nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link::before {
 	padding: 1em 1em 0.25em 1em; /*top right bottom left*/
   background: var(--color-background-jumbotron);
   max-width: 1200px;
-  min-width: 330px;
+  min-width: 355px;
 }
 
 /*************************************
@@ -327,7 +327,7 @@ div.expanded {
     display: block;
   }
   .pic-headshot {
-    max-height: 125px; /*200px;*/
+    max-height: 125px;
     margin-top: 5px;
   }
   .postdoc {
@@ -335,7 +335,7 @@ div.expanded {
     font-size: 160%;
   }
   .pic-research {
-    max-width: 75px; /* 150 */
+    max-width: 75px;
     margin: 0px 20px 10px 0px;
   }
   .short-text { display: block; }
