@@ -159,11 +159,17 @@ p b {
    navigation bar
  *************************************/
 nav.navbar {
-	background: var(--color-navbar);
-	padding-top: 0px;
+  background: var(--color-navbar);
+  padding-top: 0px;
 }
 nav.navbar button.navbar-toggler {
   display: none;
+  border: none;
+  background: var(--color-navbar);
+}
+nav.navbar span.navbar-toggler-icon {
+  background: var(--color-navbar);
+  background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=222a2a');
 }
 nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:link {
 	color: var(--color-navbar-link);
@@ -198,9 +204,6 @@ nav.navbar a.navbar-brand:hover {
 }
 nav.navbar a.navbar-brand.active {
 	color: var(--color-navbar-brand);
-}
-nav.navbar button.navbar-toggler {
-	background: var(--color-navbar-link);
 }
 
 /* insert invisible bold text in navbar so that it does not move when the page is selected */
