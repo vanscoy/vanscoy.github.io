@@ -224,7 +224,7 @@ nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link::before {
 	padding: 1em 1em 0.25em 1em; /*top right bottom left*/
   background: var(--color-background-jumbotron);
   max-width: 1200px;
-  min-width: 340px;
+  min-width: 330px;
 }
 
 /*************************************
