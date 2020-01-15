@@ -10,8 +10,8 @@ body {
 	padding-top: 65px;  /* add padding to the top for navbar */
 	background: var(--color-background);
 	font-family: Verdana;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
   margin-top: 1em;
   font-size: 85%;
 }
@@ -221,11 +221,8 @@ nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link::before {
 	padding: 1em 1em 0.25em 1em; /*top right bottom left*/
   background: var(--color-background-jumbotron);
   max-width: 1200px;
-  min-width: 360px;
+  min-width: 330px;
 }
-/* .jumbotron .header-info {
-	min-width: 150px;
-} */
 
 /*************************************
    blocktitle
@@ -329,7 +326,6 @@ div.expanded {
   nav.navbar button.navbar-toggler {
     display: block;
   }
-
   .pic-headshot {
     max-height: 125px; /*200px;*/
     margin-top: 5px;
