@@ -167,10 +167,10 @@ nav.navbar button.navbar-toggler {
   border: none;
   background: var(--color-navbar);
 }
-nav.navbar span.navbar-toggler-icon {
+/* nav.navbar span.navbar-toggler-icon {
   background: var(--color-navbar);
-  background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=222a2a');
-}
+  background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=ffffff');
+} */
 nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:link {
 	color: var(--color-navbar-link);
 	padding-top: 15px;
@@ -224,7 +224,7 @@ nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link::before {
 	padding: 1em 1em 0.25em 1em; /*top right bottom left*/
   background: var(--color-background-jumbotron);
   max-width: 1200px;
-  min-width: 330px;
+  min-width: 355px;
 }
 
 /*************************************
