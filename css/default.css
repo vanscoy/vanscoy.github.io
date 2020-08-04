@@ -222,7 +222,7 @@ nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link::before {
 	padding: 1em 1em 0.25em 1em; /*top right bottom left*/
   background: var(--color-background-jumbotron);
   max-width: 1200px;
-  min-width: 375px;
+  min-width: 320px;
 }
 
 /*************************************
@@ -300,7 +300,7 @@ div.codeblock + p {
 	margin: 0 auto;
 }
 .pic-headshot {
-	max-height: 200px; /*160px;*/
+  max-width: 160px;
 }
 .pic-research {
 	max-width: 150px;
@@ -323,16 +323,12 @@ div.expanded {
 
 /* small devices */
 @media (max-width: 767.98px) {
-  body {font-size: 70%;}
+  body {font-size: 80%;}
   nav.navbar button.navbar-toggler {
     display: block;
   }
-  .pic-headshot {
-    max-height: 125px;
-    margin-top: 5px;
-  }
   .pic-research {
-    max-width: 75px;
+    /*max-width: 75px;*/
     margin: 0px 20px 10px 0px;
   }
   .short-text { display: block; }
