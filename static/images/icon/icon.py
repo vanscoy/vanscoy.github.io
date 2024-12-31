@@ -1,6 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
 
-def generate_letter_image(letter, color, font_size=100, font_path='arial.ttf'):
+def generate_letter_image(letter, color, font_size=256, font_path='arial.ttf'):
     """Generates a PNG image of the given letter in the specified color."""
 
     # Create a new image with a transparent background

@@ -1,11 +1,23 @@
 {
+  "lang": "en",
   "name": "Bryan Van Scoy",
   "short_name": "Van Scoy",
   "description": "Personal academic website",
+  "id": "/",
   "icons": [
     {
-      "src": "/images/icon.png",
+      "src": "/images/icon-100.png",
       "sizes": "100x100",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icon-256.png",
+      "sizes": "256x256",
       "type": "image/png"
     }
   ],

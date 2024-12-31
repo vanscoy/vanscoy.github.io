@@ -1,3 +1,4 @@
 /public/
 /resources/
 *.code-workspace
+*.py
