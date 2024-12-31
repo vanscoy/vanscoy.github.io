@@ -1,0 +1,124 @@
+.course {
+  .tab-links {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: space-evenly;
+  
+    button {
+      background-color: inherit;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      width: 33.33%;
+      transition: 0.3s;
+      font-family: $font-sans;
+      font-weight: bold;
+      color: #404040;
+      font-size: 100%;
+      &:hover {
+        background-color: #ddd;
+      }
+      &:active {
+        background-color: #ccc;
+      }
+    }
+  }
+
+  .tab-content {
+    display: none;
+    padding: 6px 0px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    h2 {
+      margin-bottom: -10pt;
+    }
+  }
+
+  .tab-content.material {
+    font-family: $font-sans;
+    .part {
+      padding: 16px 0 0 0;
+      margin: 0;
+      font-weight: bold;
+      color: #404040;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .col1 {
+      width: 4%;
+      text-align: center;
+    }
+    .col2 {
+      width: 53%;
+      text-align: left;
+      padding-left: 0.5em;
+    }
+    .col3 {
+      width: 15%;
+      text-align: center;
+    }
+    .col4 {
+      width: 28%;
+      text-align: left;
+      padding-left: 0.5em;
+    }
+    th {
+      font-weight: bold;
+      text-align: center;
+    }
+    .tentative {
+      color: #95a5a6;
+    }
+  }
+
+  .grading-policy {
+    text-align: justify;
+    table {
+      border: 2px solid #ddd;
+      display: inline-block;
+      vertical-align: middle;
+      td {
+        padding: 0 4pt;
+      }
+    }
+    &:after {
+      content: '';
+      width: 100%;
+      display: inline-block;
+    }
+  }
+
+  .letter-grade {
+    border: 2px solid #ddd;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20pt;
+    td {
+      padding: 0 10pt;
+    }
+  }
+}
+
+.course-links {
+  display: inline-block;
+  height: 25px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

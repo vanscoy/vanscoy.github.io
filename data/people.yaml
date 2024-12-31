@@ -1,0 +1,119 @@
+- slug: vanscoy
+  name:
+    first: Bryan
+    last: Van Scoy
+  url: 'https://vanscoy.github.io/'
+- slug: lessard
+  name:
+    first: Laurent
+    last: Lessard
+  url: 'https://laurentlessard.com/'
+- slug: freeman
+  name:
+    first: Randy
+    middle: A
+    last: Freeman
+  url: 'https://www.eecs.northwestern.edu/~freeman/'
+- slug: lynch
+  name:
+    first: Kevin
+    middle: M
+    last: Lynch
+  url: 'https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/lynch-kevin.html'
+- slug: taylor
+  name:
+    first: Adrien
+    last: Taylor
+  url: 'https://adrientaylor.github.io/'
+- slug: bianchin
+  name:
+    first: Gianluca
+    last: Bianchin
+  url: 'https://gianlucabi.github.io/'
+- slug: kia
+  name:
+    first: Solmaz
+    middle: S
+    last: Kia
+  url: 'https://solmaz.eng.uci.edu/'
+- slug: martinez
+  name:
+    first: Sonia
+    last: Martínez
+  url: 'http://muro.ucsd.edu/sonia/'
+- slug: cortes
+  name:
+    first: Jorge
+    last: Cortés
+  url: 'http://terrano.ucsd.edu/jorge/'
+- slug: sundararajan
+  name:
+    first: Akhil
+    last: Sundararajan
+  url: 'https://www.linkedin.com/in/akhilsundararajan/'
+- slug: cyrus
+  name:
+    first: Saman
+    last: Cyrus
+  url: 'https://scholar.google.com/citations?user=XMny7E8AAAAJ&hl=en'
+- slug: hu
+  name:
+    first: Bin
+    last: Hu
+  url: 'https://binhu7.github.io/'
+- slug: phan
+  name:
+    first: Tra Yen Nhu
+    last: Phan
+  url: 'https://www.linkedin.com/in/tra-yen-nhu-phan/'
+- slug: ha
+  name:
+    first: Lam
+    last: Ha
+  url: 'https://www.linkedin.com/in/lamnha/'
+- slug: jamieson
+  name:
+    first: Peter
+    last: Jamieson
+  url: 'http://www.drpeterjamieson.com/'
+- slug: scott
+  name:
+    first: Mark
+    last: Scott
+  url: 'https://scholar.google.com/citations?user=pfDhDQsAAAAJ&hl=en'
+- slug: simpson-porco
+  name:
+    first: John
+    middle: W
+    last: Simpson-Porco
+  url: 'https://www.control.utoronto.ca/~jwsimpson/'
+- slug: hengstebeck
+  name:
+    first: Cole
+    last: Hengstebeck
+  url: 'https://colehengstebeck.com/'
+- slug: young
+  name:
+    first: Gerald
+    last: Young
+  url: 'https://www.math.uakron.edu/~jerry/'
+- slug: clemons
+  name:
+    first: Curtis
+    last: Clemons
+  url: 'https://www.math.uakron.edu/~curtis/'
+- slug: premkumar
+  name:
+    first: Gowtham Raj Veeraswamy
+    last: Premkumar
+  url: 'https://www.linkedin.com/in/gowthamraj29700/'
+- slug: khan
+  name:
+    first: Mahfizur
+    last: Khan
+  url: 'https://scholar.google.com/citations?user=w3DGp_AAAAAJ&hl=en'
+- slug: isurin
+  name:
+    first: Alexander
+    last: Isurin
+  url: 'https://ieeexplore.ieee.org/author/37725513100'

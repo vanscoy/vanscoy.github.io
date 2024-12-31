@@ -1,0 +1,61 @@
+<div class="references">
+  
+  {{ $references := where .Site.Data.references.references "tags" "intersect" (slice $.Page.File.BaseFileName) }}
+  
+  {{ with $references }}
+    <h2>References</h2>
+    <ul>
+      {{ range $references }}
+        {{ if in .tags $.Page.File.BaseFileName }}
+
+          <li>{{ .title | markdownify }}
+            
+            <!-- author(s) -->
+            {{ with .authors }}
+              by
+              {{ $numauthors := len . }}
+              
+              {{ if eq $numauthors 1 }}
+                {{ index . 0 }}
+
+              {{ else if eq $numauthors 2 }}
+                {{ index . 0 }} and {{ index . 1 | markdownify }}
+
+              {{ else }}
+                {{ range $index, $author := . }}
+                  {{ if lt (add $index 1) $numauthors }}
+                    {{ . }}, 
+                  {{ else }}
+                    and {{ . }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+
+            <!-- year -->
+            {{ with .year }}
+              ({{ . }})
+            {{ end }}
+
+            <!-- link(s) -->
+            {{ with .arxiv }}
+              <a href="https://arxiv.org/abs/{{ . }}" target="_blank"><img src="/images/logo/arxiv.png" alt="arXiv" style="height:0.75em;"></a>
+            {{ end }}
+            {{ with .ieee }}
+              <a href="https://ieeexplore.ieee.org/document/{{ . }}" target="_blank"><img src="/images/logo/ieee.png" alt="arXiv" style="height:0.75em;"></a>
+            {{ end }}
+            {{ with .springer }}
+              <a href="https://link.springer.com/article/{{ . }}" target="_blank"><img src="/images/logo/springer.png" alt="arXiv" style="height:0.75em;"></a>
+            {{ end }}
+            {{ with .doi }}
+              <a href="https://doi.org/{{ . }}" target="_blank"><img src="/images/logo/doi.png" alt="arXiv" style="height:0.75em;"></a>
+            {{ end }}
+            {{ with .link }}
+              <a href="{{ . }}" target="_blank">(link)</a>
+            {{ end }}
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  {{ end }}
+</div>

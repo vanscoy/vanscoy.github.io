@@ -1,0 +1,74 @@
+{{ $slug := .File.BaseFileName }}
+{{ with .Params }}
+<div class="title" id="{{ $slug }}">{{ .title }}</div>
+<div class="year">{{ .year }}</div>
+<div class="break"></div>
+
+{{ with .school }}
+<div class="school">
+  <a href="{{ .url }}" target="_blank">{{ .name }}</a>
+</div>
+{{ end }}
+
+{{ with .journal }}
+<div class="journal">
+  {{ partial "journal.html" . }}
+</div>
+{{ end }}
+
+{{ with .conference }}
+<div class="conference">
+  {{ partial "conference.html" . }}
+</div>
+{{ end }}
+
+<div class="break"></div>
+<ul class="authors">
+    {{ range .authors }}
+    <li>
+        {{ partial "person.html" . }}
+    </li>
+    {{ end }}
+</ul>
+<div class="break icons">
+    {{ with (print "/docs/papers/" $slug ".pdf") }}
+    {{ if fileExists (print "static" .) }}
+    <a href="{{ . }}" data-toggle="tooltip" target="_blank" title="PDF"><i class="fa-solid fa-file-pdf fa-fw"></i></a>
+    {{ end }}
+    {{ end }}
+    
+    {{ with .bibtex }}
+    <a onclick="navigator.clipboard.writeText({{ . }}); alert('BibTeX copied to clipboard')" data-toggle="tooltip" target="_blank" title="BibTeX"><i class="fa-solid fa-quote-left fa-fw"></i></a>
+    {{ end }}
+    
+    {{ with .doi }}
+    <a href="https://doi.org/{{ . }}" data-toggle="tooltip" target="_blank" title="DOI"><i class="ai ai-doi"></i></a>
+    {{ end }}
+    
+    {{ with .link }}
+    <a href="{{ . }}" data-toggle="tooltip" target="_blank" title="Link"><i class="fa-solid fa-link"></i></a>
+    {{ end }}
+    
+    {{ with .googlescholar }}
+    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.Params.googlescholar }}&citation_for_view={{ site.Params.googlescholar }}:{{ . }}" data-toggle="tooltip" target="_blank" title="Google Scholar">
+        <i class="ai ai-google-scholar"></i>
+    </a>
+    {{ end }}
+    
+    {{ with .code }}
+    <a href="{{ . }}" data-toggle="tooltip" target="_blank" title="Code"><i class="fa-solid fa-code"></i></a>
+    {{ end }}
+    
+    {{ with (print "/docs/slides/" $slug ".pdf") }}
+    {{ if fileExists (print "static" .) }}
+    <a href="{{ . }}" data-toggle="tooltip" target="_blank" title="Slides"><i class="fa-solid fa-person-chalkboard"></i></a>
+    {{ end }}
+    {{ end }}
+    
+    {{ with (print "/docs/posters/" $slug ".pdf") }}
+    {{ if fileExists (print "static" .) }}
+    <a href="{{ . }}" data-toggle="tooltip" target="_blank" title="Poster"><i class="fa-solid fa-image"></i></a>
+    {{ end }}
+    {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,15 @@
+- slug: CSM
+  name: IEEE Control Systems Magazine
+  url: 'https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5488303'
+- slug: LCSS
+  name: IEEE Control Systems Letters
+  url: 'https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=7782633'
+- slug: TCNS
+  name: IEEE Transactions on Control of Network Systems
+  url: 'https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6509490'
+- slug: franklin-open
+  name: Franklin Open
+  url: 'https://www.sciencedirect.com/journal/franklin-open'
+- slug: IFAC-PapersOnLine
+  name: IFAC-PapersOnLine
+  url: 'https://www.sciencedirect.com/journal/ifac-papersonline'

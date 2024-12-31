@@ -1,0 +1,20 @@
+{{ define "main" }}
+  {{ .Content }}
+  {{ range .Pages }}
+    {{ $slug := .Title | urlize }}
+    <article class="section">
+      <h2>{{ .Title }}</h2>
+      <div id="{{ $slug }}">
+        <div class="summary" style="display:block">
+          {{ .Summary }}
+        </div>
+        {{ if .Params.more}}
+        <div class="full" style="display:none">
+          {{ .Content }}
+        </div>
+        <a class="more-less-button" onclick="toggle_more('{{ $slug }}');"><i class="fa-solid fa-angles-down"></i></a>
+        {{ end }}
+      </div>
+    </article>
+  {{ end }}
+{{ end }}

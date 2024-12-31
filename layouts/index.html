@@ -1,0 +1,43 @@
+{{ define "main" }}
+  
+  <div class="header">
+    <div id="headshot"><img src="{{ .Params.image }}" /></div>
+    <div id="header-info">
+    <p id="position">{{ .Params.position }}</p>
+    <a href="{{ .Params.department_link }}" target="_blank">{{ .Params.department }}</a><br />
+    <a href="{{ .Params.university_link }}" target="_blank">{{ .Params.university }}, {{ .Params.city }}, {{ .Params.state }}</a><br />
+    <p id="contact-info">Contact Information</p>
+    <a href="mailto:{{ .Params.email }}" target="_blank">{{ .Params.email }}</a>
+    </div>
+  </div>
+  
+  {{ .Content }}
+  
+  {{ with site.Params }}
+  <div class="section profiles">
+    <h2>Profiles</h2>
+    <ul>
+      
+      {{ with .googlescholar}}
+      <li><a href="https://scholar.google.com/citations?user={{ . }}" target="_blank"><i class="ai ai-google-scholar"></i>Google Scholar</a></li>
+      {{ end }}
+      
+      {{ with .github }}
+      <li><a href="https://github.com/{{ . }}" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a></li>
+      {{ end }}
+      
+      {{ with .orcid }}
+      <li><a href="https://orcid.org/{{ . }}" target="_blank"><i class="ai ai-orcid"></i>ORCID</a></li>
+      {{ end }}
+    
+      {{ with .semanticscholar }}
+      <li><a href="https://www.semanticscholar.org/author/{{ . }}" target="_blank"><i class="ai ai-semantic-scholar"></i>Semantic Scholar</a></li>
+      {{ end }}
+      
+      {{ with .ieee }}
+      <li><a href="https://ieeexplore.ieee.org/author/{{ . }}" target="_blank"><i class="ai ai-ieee"></i>IEEE</a></li>
+      {{ end }}
+  </ul>
+  </div>
+  {{ end }}
+{{ end }}

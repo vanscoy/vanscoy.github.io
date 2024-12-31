@@ -1,0 +1,9 @@
+{{ with index (where site.Data.people "slug" .) 0 }}
+<a href="{{ .url }}" target="_blank">
+  {{ with .name }}
+  {{ .first }}
+  {{ with .middle }} {{ . }} {{ end }}
+  {{ .last }}
+  {{ end }}
+</a>
+{{ end }}

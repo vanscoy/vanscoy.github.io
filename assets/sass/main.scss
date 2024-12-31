@@ -1,0 +1,288 @@
+/*************************************
+  Headers
+*************************************/
+h1 {
+  font-size: 200%;
+  margin: 0px 0px 10px 0px;
+}
+h2 {
+  font-size: 130%;
+  margin: 8px 0 2px 0;
+}
+h3 {
+  font-size: 110%;
+  margin: 8px 0 2px 0;
+}
+h1, h2, h3 {
+  font-family: $font-sans;
+  font-weight: bold;
+  color: $color-header;
+}
+
+/*************************************
+  Transitions
+*************************************/
+.fadein {
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/*************************************
+  Body
+*************************************/
+body {
+  font-size: 18px;
+  color: $color-text;
+  background-color: $color-background;
+  font-family: $font-sans;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a {
+  color: $color-link;
+  
+  &:link {
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.main {
+  display: inline-block;
+  max-width: $content-width;
+  min-width: 320px;
+  margin: auto;
+  padding-left: $nav-width;
+
+  @media (max-width: 767.98px) {
+    max-width: 92%;
+    padding-left: 0px;
+  }
+
+  .title {
+    color: $color-title;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 32px 0px;
+    text-align: center;
+  }
+  
+  .subtitle {
+    color: $color-subtitle;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding-top: 10px;
+    text-align: center;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 20px 0px 60px 0px;
+  }
+  
+  #headshot {
+    display: inline-block;
+    vertical-align: top;
+    img {
+      max-width: 120px;
+      margin-right: 20px;
+    }
+  }
+  
+  #header-info {
+    display: inline-block;
+    text-align: left;
+  }
+  
+  #position {
+    font-size: 130%;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: $color-title;
+  }
+  
+  #contact-info {
+    font-size: 115%;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    color: $color-title;
+  }
+  
+  a {
+    color: $color-section-link;
+    &:hover {
+      color: $color-section-link-hover;
+      text-decoration: none;
+    }
+    i {
+      padding-right: 10px;
+    }
+  }
+}
+
+.pic-research {
+	max-width: 150px;
+  margin: 8px 20px 10px 0px;
+  vertical-align: top;
+  float: left;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.ai, .fa-brands {
+  color: $color-icon;
+}
+
+/*************************************
+  Section
+*************************************/
+.section {
+  margin: auto;
+  background-color: $color-section-background;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px $color-section-box-shadow;
+  margin-bottom: 20px;
+  color: $color-section-text;
+
+  h2 {
+    color: $color-title;
+    a {
+      color: $color-section-title;
+    }
+  }
+  p {
+    margin: 0;
+    line-height: 1.5;
+    
+    i.icon {
+      margin-right: 10px;
+      color: $color-icon;
+    }
+  }
+  
+  ul.education {
+    padding: 0;
+    
+    li:not(:last-child) {
+      padding-bottom: 25px;
+    }
+    
+    li {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+      &:before {
+        margin: 0;
+        padding: 0;
+      }
+      .year, .advisor, .university {
+        color: $color-section-important;
+      }
+    }
+  }
+  
+  ul.experience {
+    padding: 0;
+    
+    li:not(:last-child) {
+      padding-bottom: 25px;
+    }
+    
+    li {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+      &:before {
+        margin: 0;
+        padding: 0;
+      }
+      .year, .advisor, .department, .position, .location {
+        color: $color-section-important;
+      }
+      .year div {
+        display: inline-block;
+      }
+    }
+  }
+  
+  ul.awards {
+    list-style-type: none;
+    padding: 0;
+    
+    li {
+      display: flex;
+      
+      .year {
+        text-align: left;
+        display: inline-block;
+        color: $color-section-important;
+        min-width: 50px;
+      }
+    }
+  }
+}
+
+.profiles {
+  ul {
+    list-style-type: none;
+    padding-left: 25px;
+    li {
+      padding-bottom: 10px;
+      &:last-child {
+        padding-bottom: 0px;
+      }
+      a {
+        color: $color-profile-link;
+        font-size: 110%;
+        &:hover {
+          color: $color-profile-link-hover;
+          text-decoration: none;
+        }
+        i {
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+/*************************************
+  Icons
+*************************************/
+.icons {
+  display: inline-block;
+  height: 25px;
+  padding-top: 15px;
+  a {
+    font-size: 22px;
+    i {
+      padding-right: 10px;
+      color: $color-icons;
+      cursor: pointer;
+      &:hover {
+        color: $color-icons-hover;
+      }
+    }
+  }
+}

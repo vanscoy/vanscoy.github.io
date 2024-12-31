@@ -1,0 +1,18 @@
+- slug: CDC
+  name: IEEE Conference on Decision and Control
+  url: 'https://ieeexplore.ieee.org/xpl/conhome/1000188/all-proceedings'
+- slug: ACC
+  name: American Control Conference
+  url: 'https://ieeexplore.ieee.org/xpl/conhome/1000030/all-proceedings'
+- slug: NecSys
+  name: IFAC Workshop on Distributed Estimation and Control in Networked Systems
+  url: 'https://www.ifac-control.org/conferences/@@conference_view'
+- slug: ICML
+  name: International Conference on Machine Learning
+  url: 'https://dl.acm.org/conference/icml'
+- slug: Allerton
+  name: Allerton Conference on Communication, Control, and Computing
+  url: 'https://allerton.csl.illinois.edu/'
+- slug: CDSR
+  name: International Conference of Control Systems and Robotics
+  url: https://cdsr.net/

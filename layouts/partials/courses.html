@@ -1,0 +1,40 @@
+<div class="courses">
+  
+  {{ $courses := where .Site.Data.courses.courses "tags" "intersect" (slice $.Page.File.BaseFileName) }}
+  
+  {{ with $courses }}
+    <h2>Courses</h2>
+    <ul>
+      {{ range $courses }}
+        {{ if in .tags $.Page.File.BaseFileName }}
+          <li><a href="{{ .link }}" target="_blank">{{ .title | markdownify }}</a>
+            
+            {{ with .instructors }}
+              by
+              {{ $numinstructors := len . }}
+              
+              {{ if eq $numinstructors 1 }}
+                {{ index . 0 }}
+
+              {{ else if eq $numinstructors 2 }}
+                {{ index . 0 }} and {{ index . 1 | markdownify }}
+
+              {{ else }}
+                {{ range $index, $instructor := . }}
+                  {{ if lt (add $index 1) $numinstructors }}
+                    {{ . }}, 
+                  {{ else }}
+                    and {{ . }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            {{ with .institution }}
+              at {{ . }}
+            {{ end }}
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  {{ end }}
+</div>

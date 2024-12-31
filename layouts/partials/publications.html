@@ -1,0 +1,7 @@
+<ul>
+{{ range sort . ".Params.year" "desc" }}
+<li class="publication section">
+  {{ partial "publication.html" . }}
+</li>
+{{ end }}
+</ul>

@@ -1,0 +1,98 @@
+{{ define "main" }}
+  
+  {{ with .Params }}
+  
+  {{ with .contact }}
+  <div class="section">
+    <h2>Contact Information</h2>
+    <p><i class="fas fa-map-marker-alt icon"></i><a href="https://{{ .address.url }}" target="_blank">{{ .address.location }}</a></p>
+    <p><i class="fas fa-envelope icon"></i><a href="mailto:{{ .email }}" target="_blank">{{ .email }}</a></p>
+    <p><i class="fas fa-globe icon"></i><a href="https://{{ .url }}" target="_blank">{{ .url }}</a></p>
+  </div>
+  {{ end }}
+  
+  {{ with .education }}
+  <div class="section">
+    <h2>Education</h2>
+    <ul class="education">
+      {{ range . }}
+        <li>
+          <div class="degree">{{ .degree }} in {{ .department }}</div>
+          <div class="year">{{ .year }}</div>
+          <div class="break"></div>
+          <div class="university">{{ .university }}</div>
+          <div class="break"></div>
+          {{ with .advisor }}
+            <div class="break"></div>
+            <div class="advisor">Advisor: {{ partial "person.html" . }}</div>
+          {{ end }}
+          {{ with .advisors }}
+            <div class="break"></div>
+            <div class="advisor">Advisors:
+              {{ $len := len . }}
+              {{ range $index, $element := . }}
+                {{ partial "person.html" $element }}
+                {{ if ne (add $index 1) $len }} and {{ end }}
+              {{ end }}
+            </div>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+  
+  {{ with .experience }}
+  <div class="section">
+    <h2>Experience</h2>
+    <ul class="experience">
+      {{ range . }}
+        <li>
+          <div class="university">{{ .university }}</div>
+          <div class="location">{{ .location }}</div>
+          <div class="break"></div>
+          <div class="position">{{ .position }}</div>
+          {{ with .year }}
+          <div class="year">
+            <div class="start">{{ .start }}</div>
+            {{ with .end}}
+              &ndash;
+              <div class="end">{{ . }}</div>
+            {{ else }}
+              &ndash;
+              <div class="end">present</div>
+            {{ end }}
+          </div>
+          <div class="break"></div>
+          {{ end }}
+          <div class="department">{{ .department }}</div>
+          {{ with .advisor }}
+            <div class="break"></div>
+            <div class="advisor">Advisor: {{ partial "person.html" . }}</div>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+  
+  {{ with .awards }}
+  <div class="section">
+    <h2>Awards</h2>
+    <ul class="awards">
+      {{ range . }}
+        <li>
+          <div class="year">{{ .year }}</div>
+          {{ if .url }}
+            <a href="{{ .url }}" target="_blank"><div class="description">{{ .description }}</div></a>
+          {{ else }}
+            <div class="description">{{ .description }}</div>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+  
+  {{ end }}
+{{ end }}

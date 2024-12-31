@@ -1,0 +1,1 @@
+magick -density 150 file.pdf -strip file.png

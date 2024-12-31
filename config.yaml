@@ -1,0 +1,42 @@
+languageCode: en-us
+title: Van Scoy
+
+# baseURL: //vanscoy.github.io/
+relativeURLs: true
+# uglyURLs: true
+# canonifyURLs: true
+disablePathToLower: true
+
+params:
+  ieee: 37085411841
+  orcid: 0000-0002-8286-2311
+  github: vanscoy
+  googlescholar: HMBAnMEAAAAJ
+  semanticscholar: Bryan-Van-Scoy/3175450
+  name:
+    - first: Bryan
+    - Last: Van Scoy
+
+# markup:
+#   goldmark:
+#     extensions:
+#       definitionList: true
+#       footnote: true
+#       linkify: true
+#       strikethrough: true
+#       table: true
+#       taskList: true
+#       typographer: true
+#     parser:
+#       attribute: true
+#       autoHeadingID: true
+#       autoHeadingIDType: github
+#     renderer:
+#       hardWraps: false
+#       unsafe: true
+#       xhtml: false
+
+outputs:
+  home:
+    - HTML
+    - JSON

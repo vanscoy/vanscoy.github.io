@@ -1,0 +1,11 @@
+{{ define "main" }}
+  
+  {{ partial "tags.html" . }}
+  
+  <h1 class="title">{{ .Title }}</h1>
+  
+  {{ .Content }}
+
+  {{ partial "references.html" . }}
+  {{ partial "courses.html" . }}
+{{ end }}

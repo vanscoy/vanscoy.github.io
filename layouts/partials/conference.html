@@ -1,0 +1,5 @@
+{{ with (index (where site.Data.conferences "slug" .) 0) }}
+  <a href="{{ .url }}" target="_blank">{{ .name }}</a>
+{{ else }}
+  <a href="{{ . }}" target="_blank">{{ . }}</a>
+{{ end }}

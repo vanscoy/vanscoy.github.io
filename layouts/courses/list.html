@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+  {{ range .Pages }}
+    <div class="section">
+      <h2>{{ .Title }}</h2>
+      
+      <div class="summary">
+        {{ .Summary }}
+      </div>
+      
+      <div class="course-links">
+        {{ with .Resources.GetMatch "notes.pdf" }}
+        <a href="{{ .RelPermalink }}" target="_blank" class="tag">Notes</a>
+        {{ end }}
+        <!-- {{ with .Resources.GetMatch "problems.pdf" }}
+        <a href="{{ .RelPermalink }}" target="_blank" class="tag">Problems</a>
+        {{ end }} -->
+      </div>
+    </div>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,27 @@
+\documentclass[tikz,border={0 0 0 0}]{standalone}
+
+\usepackage{xcolor}
+
+\definecolor{col}{HTML}{153a47}
+
+\usetikzlibrary{calc,positioning,arrows.meta}
+
+\tikzset{block/.style={%
+  inner xsep=2mm,
+  inner ysep=2mm,
+  anchor=center,
+  rounded corners,
+  very thick,
+  draw}}
+
+\tikzset{link/.style={->,very thick,>={Latex[length=3.5mm,width=5mm]},rounded corners=2mm,line width=1.2mm,color=col}}
+
+
+\begin{document}
+
+\begin{tikzpicture}
+  \path [use as bounding box,yshift=2.5mm] (0,-1) rectangle (1,0);
+  \draw [link] (0.75,0) -| (0.94,-0.6) -| (0.06,0) -- (0.65,0);
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,58 @@
+// main
+$content-width: 60%;
+$primary: #153a47;
+$color-text: #b8bcc6;
+$color-background: #222a2a;
+$color-link: lighten($primary, 25%);
+$color-header: lighten($color-text, 15%);
+$color-title: lighten($color-text, 10%);
+$color-subtitle: darken($color-text, 10%);
+
+// section
+$color-section-background: lighten($color-background, 3%);
+$color-section-text: darken($color-text, 5%);
+$color-section-title: lighten($color-text, 5%);
+$color-section-important: darken($color-text, 25%);
+$color-section-link: darken($color-text, 15%);
+$color-section-link-hover: lighten($primary, 25%);
+$color-section-box-shadow: rgba(0, 0, 0, 0.1);
+
+// profile
+$color-profile-link: darken($color-text, 15%);
+$color-profile-link-hover: lighten($primary, 25%);
+
+// publication
+$color-publication-link: darken($color-text, 10%);
+$color-publication-link-hover: lighten($primary, 15%);
+$color-publication-title: lighten($color-text, 10%);
+$color-author-link: $color-text;
+$color-author-link-hover: lighten($primary, 15%);
+
+$color-publication-sort-background: $primary;
+$color-publication-sort-text: lighten($primary, 80%);
+$color-publication-sort-background-selected: lighten($color-publication-sort-background, 10%);
+
+// icon
+$color-icon: lighten($color-text, 10%);
+$color-icons: darken($color-text, 10%);
+$color-icons-hover: lighten($primary, 15%);
+
+// select menu
+$color-select: lighten($color-text, 10%);
+$color-select-background: lighten($color-background, 3%);
+
+// tag
+$color-tag-background: lighten($color-background, 6%);
+$color-tag-text: lighten($primary, 30%);
+$color-tag-background-hover: lighten($color-tag-background, 3%);
+$color-tag-text-hover: lighten($color-tag-text, 8%);
+$color-tag-symbol: $color-tag-text;
+$color-tag-symbol-hover: $color-tag-text-hover;
+
+// navbar
+$nav-width: 150px;
+$nav-height: 50px;
+$color-navbar-link: lighten($color-text, 10%);
+$color-navbar-link-active: white;
+$color-navbar-brand: #f1f4f4;
+$color-navbar-background: $primary;

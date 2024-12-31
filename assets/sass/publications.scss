@@ -1,0 +1,100 @@
+#sort-publications {
+  background: $color-publication-sort-background;
+  margin-bottom: 40px;
+  opacity: 100%;
+  width: 100%;
+  border-radius: 8px;
+
+  label {
+    display: none;
+  }
+  select {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    outline: none;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+    height: 3em;
+    background-color: $color-publication-sort-background;
+    color: $color-publication-sort-text;
+    user-select: none;
+
+    option {
+      display: inline-block;
+      margin: auto;
+      width: 25%;
+      padding: 1em 0;
+      user-select: none;
+      cursor: pointer;
+
+      background-color: $color-publication-sort-background;
+      color: $color-publication-sort-text;
+
+      &:checked {
+        color: $color-publication-sort-text;
+
+        background-image: linear-gradient($color-publication-sort-background-selected,$color-publication-sort-background-selected);
+      }
+    }
+  }
+}
+
+.publications {
+  display: block;
+  animation: fadein 0.5s;
+
+  h2 {
+    color: $color-subtitle;
+  }
+}
+
+.publication {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 12pt;
+
+    a {
+        color: $color-publication-link;
+        cursor: pointer;
+        &:hover {
+            color: $color-publication-link-hover;
+            text-decoration: none;
+        }
+    }
+
+    .title {
+      font-size: 12pt;
+      text-align: left;
+      padding: 5px 0px 15px 0px;
+      width: calc(100% - 50px);
+      a {
+        color: $color-publication-title;
+      }
+    }
+    .year {
+        width: 50px;
+        text-align: right;
+    }
+    ul.authors {
+        list-style-type: none;
+        padding-left: 0;
+        li {
+            display: inline-block;
+            padding-right: 10px;
+            a {
+                color: $color-author-link;
+                text-decoration: none;
+
+                &:hover {
+                    color: $color-author-link-hover;
+                }
+            }
+        }
+    }
+}

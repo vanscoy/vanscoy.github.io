@@ -1,0 +1,6 @@
+{{- $scratch := newScratch -}}
+{{- $scratch.Add "searchindex" slice -}}
+{{- range $index, $element := (where .Site.Pages "Kind" "page") -}}
+    {{- $scratch.Add "searchindex" (dict "id" $index "title" $element.Title "url" $element.Permalink "tags" $element.Params.tags) -}}
+{{- end -}}
+{{- $scratch.Get "searchindex" | jsonify | safeJS -}}

@@ -1,0 +1,13 @@
+/* fonts */
+$font-serif: "Computer Modern Serif", serif;
+$font-sans: "Computer Modern Sans", sans-serif;
+$font-font-awesome: "Font Awesome 5 Free";
+
+/* sass */
+@import "sass/font.scss";
+@import "sass/theme.scss";
+@import "sass/main.scss";
+@import "sass/tag.scss";
+@import "sass/nav.scss";
+@import "sass/publications.scss";
+@import "sass/course.scss";

@@ -1,0 +1,77 @@
+{{ define "main" }}
+
+  <form id="sort-publications" onchange="publicationVisibility()">
+    <label for="pubsort">Sort by:</label>
+    <select name="pubsort" id="pubsort" size="3">
+      <option value="year" selected>Year</option>
+      <option value="topic">Topic</option>
+      <option value="type">Type</option>
+    </select>
+  </form>
+
+  {{ $pages := .Pages }}
+  
+  <div id="publications-by-year" class="publications">
+    {{ $forthcoming := where $pages "Params.publication-type" "forthcoming" }}
+    {{ $others := complement $forthcoming $pages }}
+    {{ $years := slice }}
+    {{ range $others }}
+      {{ $years = $years | append .Params.year }}
+    {{ end }}
+    {{ $years := sort $years "value" "desc" | uniq }}
+    
+    {{ if $forthcoming }}
+    <h2>Forthcoming</h2>
+    {{ partial "publications.html" $forthcoming }}
+    {{ end }}
+    {{ range $years }}
+    <h2>{{ . }}</h2>
+    {{ partial "publications.html" (where $pages "Params.year" .) }}
+    {{ end }}
+  </div>
+  
+  <div id="publications-by-topic" class="publications" style="display:none">
+    {{ $topics := slice }}
+    {{ range .Pages }}
+      {{ $topics = union $topics .Params.keywords }}
+    {{ end }}
+    
+    {{ $numpapers := slice }}
+    {{ range $topics }}
+      {{ $numpapers = $numpapers | append (len (where $pages "Params.keywords" "intersect" (slice .))) }}
+    {{ end }}
+    
+    {{ $topicmap := slice }}
+    {{ range $index, $topic := $topics }}
+      {{ $topicmap = $topicmap | append (dict "topic" $topic "number" (index $numpapers $index)) }}
+    {{ end }}
+    
+    {{ $topicmap = sort $topicmap ".number" "desc" }}
+    
+    {{ range $topicmap }}
+    <h2>{{  title .topic }}</h2>
+    {{ partial "publications.html" (where $pages "Params.keywords" "intersect" (slice .topic)) }}
+    {{ end }}
+  </div>
+  
+  <div id="publications-by-type" class="publications" style="display:none">
+    <h2>Journal Publications</h2>
+    {{ partial "publications.html" (where .Pages "Params.publication-type" "journal") }}
+    
+    <h2>Forthcoming Publications</h2>
+    {{ partial "publications.html" (where .Pages "Params.publication-type" "forthcoming") }}
+
+    <h2>Tutorial Papers</h2>
+    {{ partial "publications.html" (where .Pages "Params.publication-type" "tutorial") }}
+    
+    <h2>Conference Proceedings</h2>
+    {{ partial "publications.html" (where .Pages "Params.publication-type" "conference") }}
+
+    <h2>Dissertation</h2>
+    {{ partial "publications.html" (where .Pages "Params.publication-type" "dissertation") }}
+
+    <h2>Thesis</h2>
+    {{ partial "publications.html" (where .Pages "Params.publication-type" "thesis") }}
+  </div>
+  
+{{ end }}

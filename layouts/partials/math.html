@@ -1,0 +1,298 @@
+<link rel="stylesheet" href="/katex/katex.min.css">
+<script src="/katex/katex.min.js"></script>
+<script defer src="/katex/contrib/auto-render.min.js"></script>
+
+<script>
+  // latex commands
+  const macros = {
+    "\\real"      : "\\mathbb{R}",
+    "\\complex"   : "\\mathbb{C}",
+    "\\natural"   : "\\mathbb{N}",
+    "\\integer"   : "\\mathbb{Z}",
+    "\\symmetric" : "\\mathbb{S}",
+    "\\field"     : "\\mathbb{F}",
+    "\\Re"        : "\\mathrm{Re}",
+    "\\Im"        : "\\mathrm{Im}",
+    "\\sgn"       : "\\text{sgn}",
+    "\\sinc"      : "\\text{sinc}",
+    "\\rect"      : "\\text{rect}",
+    "\\epsilon"   : "\\varepsilon",
+    "\\ds"        : "\\displaystyle",
+    "\\d"         : "\\mathrm{d}",
+    "\\dt"        : "\\d t",
+    "\\ddt"       : "\\frac{\\d}{\\dt}",
+    "\\df"        : "\\nabla\\!f",
+    "\\A"         : "\\mathcal{A}",
+    "\\B"         : "\\mathcal{B}",
+    "\\C"         : "\\mathcal{C}",
+    "\\D"         : "\\mathcal{D}",
+    "\\E"         : "\\mathcal{E}",
+    "\\F"         : "\\mathcal{F}",
+    "\\G"         : "\\mathcal{G}",
+    "\\H"         : "\\mathcal{H}",
+    "\\I"         : "\\mathcal{I}",
+    "\\J"         : "\\mathcal{J}",
+    "\\K"         : "\\mathcal{K}",
+    "\\L"         : "\\mathcal{L}",
+    "\\M"         : "\\mathcal{M}",
+    "\\N"         : "\\mathcal{N}",
+    "\\O"         : "\\mathcal{O}",
+    "\\P"         : "\\mathcal{P}",
+    "\\Q"         : "\\mathcal{Q}",
+    "\\R"         : "\\mathcal{R}",
+    "\\S"         : "\\mathcal{S}",
+    "\\T"         : "\\mathcal{T}",
+    "\\U"         : "\\mathcal{U}",
+    "\\V"         : "\\mathcal{V}",
+    "\\W"         : "\\mathcal{W}",
+    "\\X"         : "\\mathcal{X}",
+    "\\Y"         : "\\mathcal{Y}",
+    "\\Z"         : "\\mathcal{Z}",
+    "\\AA"        : "\\mathbb{A}",
+    "\\BB"        : "\\mathbb{B}",
+    "\\CC"        : "\\mathbb{C}",
+    "\\DD"        : "\\mathbb{D}",
+    "\\EE"        : "\\mathbb{E}",
+    "\\FF"        : "\\mathbb{F}",
+    "\\GG"        : "\\mathbb{G}",
+    "\\HH"        : "\\mathbb{H}",
+    "\\II"        : "\\mathbb{I}",
+    "\\JJ"        : "\\mathbb{J}",
+    "\\KK"        : "\\mathbb{K}",
+    "\\LL"        : "\\mathbb{L}",
+    "\\MM"        : "\\mathbb{M}",
+    "\\NN"        : "\\mathbb{N}",
+    "\\OO"        : "\\mathbb{O}",
+    "\\PP"        : "\\mathbb{P}",
+    "\\QQ"        : "\\mathbb{Q}",
+    "\\RR"        : "\\mathbb{R}",
+    "\\SS"        : "\\mathbb{S}",
+    "\\TT"        : "\\mathbb{T}",
+    "\\UU"        : "\\mathbb{U}",
+    "\\VV"        : "\\mathbb{V}",
+    "\\WW"        : "\\mathbb{W}",
+    "\\XX"        : "\\mathbb{X}",
+    "\\YY"        : "\\mathbb{Y}",
+    "\\ZZ"        : "\\mathbb{Z}",
+    "\\Hinf"      : "\\H_\\infty",
+    "\\Htwo"      : "\\H_2",
+    "\\trace"     : "\\mathrm{tr}",
+    "\\diag"      : "\\mathrm{diag}",
+    "\\ric"       : "\\mathrm{Ric}",
+    "\\rank"      : "\\mathrm{rank}",
+    "\\tp"        : "\\mathsf{T}",
+    "\\exp"       : "\\mathbb{E}",
+    "\\var"       : "\\mathrm{var}",
+    "\\cov"       : "\\mathrm{cov}",
+    "\\ess"       : "\\text{ess}\\,",
+    "\\defeq"     : "\\colonequals",
+    "\\eqdef"     : "\\equalscolon",
+    "\\grad"      : "\\nabla",
+    "\\kron"      : "\\otimes",
+    "\\ds"        : "\\displaystyle",
+    "\\CCF"       : "\\text{CCF}",
+    "\\OCF"       : "\\text{OCF}",
+    "\\ker"       : "\\mathrm{ker}",
+    "\\row"       : "\\mathrm{row}",
+    "\\col"       : "\\mathrm{col}",
+    "\\null"      : "\\mathrm{null}",
+    "\\trace"     : "\\mathrm{tr}",
+    "\\diag"      : "\\mathrm{diag}",
+    "\\dom"       : "\\text{dom}",
+    "\\subjectto" : "\\text{subject to}",
+    "\\minimize"  : "\\text{minimize}",
+    "\\suchthat"  : "\\text{ such that }",
+    "\\and"       : "\\text{ and }",
+    "\\bmat"      : "\\begin{bmatrix}#1\\end{bmatrix}",
+    "\\pmat"      : "\\begin{pmatrix}#1\\end{pmatrix}",
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      macros
+    });
+  });
+</script>
+
+
+<!-- CUSTOM HTML MATH ELEMENTS -->
+
+<script>
+  customElements.define('ds-math', class extends HTMLElement {
+
+    renderMath() {
+      var content = this.innerHTML.replace(/&amp;/g, "\&");
+
+      if (this.classList.contains("aligned")) {
+        content = "\\begin{aligned}" + content + "\\end{aligned}";
+      }
+      if (this.classList.contains("color-box")) {
+        content = "\\colorbox{#d7dada}{$\\ds" + content + "$}"
+      }
+      return content;
+    }
+
+    connectedCallback() {
+      // setTimeout( () => console.log(this.innerHTML.replace(/&amp;/g, "\&")));
+      setTimeout(
+        () => katex.render( this.renderMath(), this, {
+        throwOnError: false,
+        displayMode: true,
+        macros
+      }));
+    }
+  });
+
+  customElements.define('aligned-math', class extends HTMLElement {
+    connectedCallback() {
+      // setTimeout( () => console.log(this.innerHTML.replace(/&amp;/g, "\&")));
+      setTimeout( () => katex.render( "\\begin{aligned}" + this.innerHTML.replace(/&amp;/g, "\&") + "\\end{aligned}", this, {
+        throwOnError: true,
+        displayMode: true,
+        macros
+      }));
+    }
+  });
+
+  customElements.define('in-math', class extends HTMLElement {
+    connectedCallback() {
+      // setTimeout( () => console.log( this.innerHTML ) );
+      setTimeout( () => katex.render( this.innerHTML, this, {
+        throwOnError: false,
+        displayMode: false,
+        macros
+      }) );
+    }
+  });
+</script>
+
+
+<!-- proof template-->
+<template id="proof-template">
+  <button>Proof</button>
+  <p></p>
+  <div>
+    <slot></slot>
+    <span style="float: right">&#9724;</span>
+    </br>
+  </div>
+</template>
+
+<script>
+
+  /* my-proof element */
+  customElements.define('my-proof', class extends HTMLElement {
+    
+    constructor() {
+      super();
+
+      // bind toggleVisibility() function to my-proof element
+      this.toggleVisibility = this.toggleVisibility.bind(this);
+
+      // shadow DOM
+      let shadowRoot = this.attachShadow({mode: 'open'});
+
+      // proof template
+      let template = document.querySelector('#proof-template');
+
+      // proof style
+      let style = document.createElement('style');
+      style.textContent = `
+      div {
+        color: gray;
+        padding-left: 1em;
+      }`;
+
+      shadowRoot.appendChild(style);
+      shadowRoot.appendChild(template.content.cloneNode(true));
+    }
+
+    get visible() {
+      return this.hasAttribute('visible');
+    }
+
+    set visible(value) {
+      if (value) {
+        this.setAttribute('visible', '');
+      } else {
+        this.removeAttribute('visible');
+      }
+    }
+
+    connectedCallback() {
+      this.shadowRoot.querySelector('button').addEventListener('click', this.toggleVisibility);
+
+      this.removeAttribute('visible');
+      this.toggleVisibility();
+    }
+
+    disconnectedCallback() {
+      this.querySelector('button').removeEventListener('click', this.hide);
+    }
+
+    toggleVisibility() {
+      
+      // console.log( this.hasAttribute('visible') );
+      // console.log( this.visible );
+      
+      if (this.visible) {
+        this.visible = false;
+        this.shadowRoot.querySelector('div').style.display = 'block';
+      } else {
+        this.visible = true;
+        this.shadowRoot.querySelector('div').style.display = 'none';
+      }
+    }
+
+    static get observedAttributes() {
+      return ['visible'];
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+      if (newValue !== oldValue) {
+        switch (name) {
+          case 'visible':
+            this.value = newValue;
+            break;
+        }
+      }
+    }
+  });
+</script>
+
+
+
+<!-- MATHJAX -->
+
+<!-- <script>
+  MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+  };
+</script>
+<script
+  type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script> -->
+
+<!-- <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+</script> -->
