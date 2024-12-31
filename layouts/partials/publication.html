@@ -38,7 +38,7 @@
     {{ end }}
     
     {{ with .bibtex }}
-    <a onclick="navigator.clipboard.writeText({{ . }}); alert('BibTeX copied to clipboard')" data-toggle="tooltip" target="_blank" title="BibTeX"><i class="fa-solid fa-quote-left fa-fw"></i></a>
+    <span onclick="navigator.clipboard.writeText({{ . }}); alert('BibTeX copied to clipboard')" data-toggle="tooltip" target="_blank" title="BibTeX"><i class="fa-solid fa-quote-left fa-fw"></i></span>
     {{ end }}
     
     {{ with .doi }}

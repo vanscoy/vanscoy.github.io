@@ -59,7 +59,7 @@
     align-items: flex-start;
     font-size: 12pt;
 
-    a {
+    a, span {
         color: $color-publication-link;
         cursor: pointer;
         &:hover {

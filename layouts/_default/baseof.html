@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +8,21 @@
     <link rel="icon" href="/images/icon.ico">
 
     <!-- manifest -->
-    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="manifest" href="/manifest.webmanifest">
     
     <!-- css / sass -->
     {{ $options := (dict "outputStyle" "compressed") }}
     {{ $style := resources.Get "main.scss" | toCSS $options }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
-    <meta name="theme-color" content="#153a47"/>
+    <link rel="preload" href="{{ $style.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    </noscript>
 
     <!-- metadata -->
     <meta charset="utf-8">
-    <meta name="Bryan Van Scoy" content="academic website">
+    <meta name="theme-color" content="#153a47">
+    <meta name="description" content="Personal academic website of Bryan Van Scoy">
 
     <!-- title -->
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
@@ -28,13 +31,16 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
     <!-- javascript -->
-    <script src="/js/functions.js" defer></script>
+    <script src="/js/functions.js" async></script>
 
     <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/be30b44ca8.js" crossorigin="anonymous" defer></script>
+    <script src="https://kit.fontawesome.com/be30b44ca8.js" crossorigin="anonymous" async></script>
 
     <!-- academicons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    </noscript>
   </head>
   <body>
     {{ partial "nav.html" . }}

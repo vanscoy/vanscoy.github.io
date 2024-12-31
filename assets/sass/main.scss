@@ -91,39 +91,34 @@ a {
   
   .header {
     text-align: center;
-    padding: 20px 0px 60px 0px;
-  }
+    padding: 20px 0 60px 0;
   
-  #headshot {
-    display: inline-block;
-    vertical-align: top;
     img {
+      display: inline-block;
+      vertical-align: top;
       max-width: 120px;
       margin-right: 20px;
     }
+    
+    div {
+      display: inline-block;
+      text-align: left;
+    
+      #position {
+        font-size: 130%;
+        font-weight: bold;
+        margin: 0;
+        color: $color-title;
+      }
+      
+      #contact-info {
+        font-size: 115%;
+        font-weight: bold;
+        margin: 15px 0 0 0;
+        color: $color-title;
+      }
+    }
   }
-  
-  #header-info {
-    display: inline-block;
-    text-align: left;
-  }
-  
-  #position {
-    font-size: 130%;
-    font-weight: bold;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    color: $color-title;
-  }
-  
-  #contact-info {
-    font-size: 115%;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 0px;
-    color: $color-title;
-  }
-  
   a {
     color: $color-section-link;
     &:hover {
@@ -276,7 +271,7 @@ a {
   display: inline-block;
   height: 25px;
   padding-top: 15px;
-  a {
+  a, span {
     font-size: 22px;
     i {
       padding-right: 10px;

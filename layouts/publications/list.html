@@ -1,8 +1,7 @@
 {{ define "main" }}
 
   <form id="sort-publications" onchange="publicationVisibility()">
-    <label for="pubsort">Sort by:</label>
-    <select name="pubsort" id="pubsort" size="3">
+    <select name="pubsort" id="pubsort" size="3" aria-label="sort publications">
       <option value="year" selected>Year</option>
       <option value="topic">Topic</option>
       <option value="type">Type</option>
