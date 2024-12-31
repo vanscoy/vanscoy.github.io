@@ -73,7 +73,7 @@ a {
 
   .title {
     color: $color-title;
-    font-size: 36px;
+    font-size: 200%;
     font-weight: bold;
     font-family: sans-serif;
     padding: 32px 0px;
@@ -82,7 +82,7 @@ a {
   
   .subtitle {
     color: $color-subtitle;
-    font-size: 24px;
+    font-size: 65%;
     font-weight: bold;
     font-family: sans-serif;
     padding-top: 10px;
@@ -166,6 +166,7 @@ a {
 
   h2 {
     color: $color-title;
+    font-size: 120%;
     a {
       color: $color-section-title;
     }
