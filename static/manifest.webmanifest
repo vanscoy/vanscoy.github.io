@@ -1,0 +1,16 @@
+{
+  "name": "Bryan Van Scoy",
+  "short_name": "Van Scoy",
+  "description": "Personal academic website",
+  "icons": [
+    {
+      "src": "/images/icon.png",
+      "sizes": "100x100",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "minimal-ui",
+  "theme_color": "#153a47",
+  "background_color": "#153a47"
+}
