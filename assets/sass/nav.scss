@@ -54,7 +54,7 @@ nav {
   }
 
   /* small devices */
-  @media (max-width: 719.98px) {
+  @media only screen and (max-width: 767px) {
     position: relative;
     min-height: 42px;
     height: fit-content;
