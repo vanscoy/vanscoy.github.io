@@ -65,9 +65,10 @@ a {
   margin: auto;
   padding-left: $nav-width;
 
-  @media (max-width: 767.98px) {
+  @media (max-width: 719.98px) {
     max-width: 92%;
     padding-left: 0px;
+    font-size: 20px; //2.8vw;
   }
 
   .title {
@@ -174,7 +175,7 @@ a {
     line-height: 1.5;
     
     i.icon {
-      margin-right: 10px;
+      margin-right: 20px;
       color: $color-icon;
     }
   }
