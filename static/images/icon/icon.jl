@@ -38,11 +38,11 @@ function icon(px, filename, maskable=false)
     finish()
 end
 
-icon(100,  "static/images/icon-100.png")
-icon(144,  "static/images/icon-144.png")
-icon(256,  "static/images/icon-256.png")
-icon(512,  "static/images/icon-512.png")
-icon(1024, "static/images/icon-1024.png")
+# icon(100,  "static/images/icon-100.png")
+# icon(144,  "static/images/icon-144.png")
+# icon(256,  "static/images/icon-256.png")
+# icon(512,  "static/images/icon-512.png")
+# icon(1024, "static/images/icon-1024.png")
 icon(75,   "static/images/icon.svg")
 icon(75,   "static/images/icon-maskable.svg", true)
 

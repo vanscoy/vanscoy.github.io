@@ -3,7 +3,7 @@ $content-width: 60%;
 $primary: #153a47;
 $secondary: #472215;
 $color-text: lighten(black, 0%);
-$color-background: mix(white, $primary, 95%);
+$color-background: mix(white, $primary, 95%);  // #f3f5f6
 $color-link: red;
 $color-header: lighten($color-text, 15%);
 $color-title: $primary;
