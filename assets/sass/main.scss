@@ -98,24 +98,30 @@ a {
       vertical-align: top;
       max-width: 120px;
       margin-right: 20px;
+      padding-bottom: 20px;
     }
     
     div {
       display: inline-block;
-      text-align: left;
-    
-      #position {
-        font-size: 130%;
-        font-weight: bold;
-        margin: 0;
-        color: $color-title;
-      }
+
+      div {
+        display: block;
+        text-align: left;
       
-      #contact-info {
-        font-size: 115%;
-        font-weight: bold;
-        margin: 15px 0 0 0;
-        color: $color-title;
+        p {
+          font-weight: bold;
+          color: $color-title;
+          margin: 0;
+        }
+
+        #position {
+          font-size: 130%;
+        }
+        
+        #contact-info {
+          font-size: 115%;
+          padding-top: 15px;
+        }
       }
     }
   }

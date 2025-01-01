@@ -3,12 +3,16 @@
   <div class="header">
     <img src="{{ .Params.image }}" alt="headshot"/>
     <div>
-      <p id="position">{{ .Params.position }}</p>
-      <a href="{{ .Params.department_link }}" target="_blank">{{ .Params.department }}</a>
-      <br />
-      <a href="{{ .Params.university_link }}" target="_blank">{{ .Params.university }}, {{ .Params.city }}, {{ .Params.state }}</a>
-      <p id="contact-info">Contact Information</p>
-      <a href="mailto:{{ .Params.email }}" target="_blank">{{ .Params.email }}</a>
+      <div>
+        <p id="position">{{ .Params.position }}</p>
+        <a href="{{ .Params.department_link }}" target="_blank">{{ .Params.department }}</a>
+        <br />
+        <a href="{{ .Params.university_link }}" target="_blank">{{ .Params.university }}, {{ .Params.city }}, {{ .Params.state }}</a>
+      </div>
+      <div>
+        <p id="contact-info">Contact Information</p>
+        <a href="mailto:{{ .Params.email }}" target="_blank">{{ .Params.email }}</a>
+      </div>
     </div>
   </div>
   
