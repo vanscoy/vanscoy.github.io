@@ -1,1 +1,6 @@
 magick -density 150 file.pdf -strip file.png
+
+# Icons
+- run icon.jl to generate icons
+  - svg with transparent background for any use
+  - png with gray background for maskable use

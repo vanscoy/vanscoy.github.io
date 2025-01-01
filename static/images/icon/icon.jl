@@ -3,16 +3,18 @@ using MathTeXEngine
 
 sz = 75
 
-function icon(px, filename, maskable=false)
+function icon(sz, filename, maskable=false)
 
-    sz = maskable ? 1.45px : px
+    a = maskable ? sz/(75 * 1.45) : sz/75
 
     Drawing(sz, sz, filename)
     
     origin()
     maskable ? background(0.15,0.15,0.15,1) : background(0,0,0,0)
     sethue("#2f809d")
-    a = px/75
+
+    # box(BoundingBox(), action = :stroke)
+
     scale(a)
     setline(8a)
 
@@ -44,6 +46,7 @@ end
 # icon(512,  "static/images/icon-512.png")
 # icon(1024, "static/images/icon-1024.png")
 icon(75,   "static/images/icon.svg")
-icon(75,   "static/images/icon-maskable.svg", true)
+icon(1024, "static/images/icon-maskable.png", true)
+# icon(75,   "static/images/icon-maskable.svg", true)
 
 preview()
