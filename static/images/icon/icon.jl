@@ -5,14 +5,13 @@ sz = 75
 
 function icon(px, filename, maskable=false)
 
-    sz = maskable ? 1.5px : px
+    sz = maskable ? 1.45px : px
 
     Drawing(sz, sz, filename)
     
     origin()
-    # background("grey6")
-    background(0,0,0,0)
-    sethue("#236076")
+    maskable ? background(0.15,0.15,0.15,1) : background(0,0,0,0)
+    sethue("#2f809d")
     a = px/75
     scale(a)
     setline(8a)
