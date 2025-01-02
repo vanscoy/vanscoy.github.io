@@ -98,3 +98,14 @@
         }
     }
 }
+
+a.cite {
+  color: $color-cite;
+  font-size: 85%;
+  &:before {
+    content: "(";
+  }
+  &:after {
+    content: ")";
+  }
+}

@@ -103,25 +103,14 @@ a {
     
     div {
       display: inline-block;
-
-      div {
-        display: block;
-        text-align: left;
-      
-        p {
-          font-weight: bold;
-          color: $color-title;
-          margin: 0;
-        }
-
-        #position {
-          font-size: 130%;
-        }
-        
-        #contact-info {
-          font-size: 115%;
-          padding-top: 15px;
-        }
+      text-align: left;
+      p {
+        font-weight: bold;
+        color: $color-title;
+        margin: 0;
+      }
+      #position {
+        font-size: 130%;
       }
     }
   }
@@ -149,7 +138,7 @@ a {
   height: 0;
 }
 
-.ai, .fa-brands {
+.ai, .fa-brands, .fas {
   color: $color-icon;
 }
 
@@ -198,6 +187,10 @@ a {
         margin: 0;
         padding: 0;
       }
+      .degree {
+        font-weight: 500;
+        width: calc(100% - 45px);
+      }
       .year, .advisor, .university {
         color: $color-section-important;
       }
@@ -219,6 +212,9 @@ a {
       &:before {
         margin: 0;
         padding: 0;
+      }
+      .university {
+        font-weight: 500;
       }
       .year, .advisor, .department, .position, .location {
         color: $color-section-important;
@@ -244,20 +240,18 @@ a {
       }
     }
   }
-}
 
-.profiles {
-  ul {
+  ul.links {
     list-style-type: none;
-    padding-left: 25px;
+    padding-left: 10px;
     li {
-      padding-bottom: 10px;
+      padding-bottom: 5px;
       &:last-child {
-        padding-bottom: 0px;
+        padding-bottom: 0;
       }
       a {
         color: $color-profile-link;
-        font-size: 110%;
+        font-size: 100%;
         &:hover {
           color: $color-profile-link-hover;
           text-decoration: none;

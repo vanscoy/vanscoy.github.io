@@ -57,3 +57,6 @@ $color-navbar-link: lighten($primary, 80%);
 $color-navbar-link-active: white;
 $color-navbar-brand: $color-navbar-link;
 $color-navbar-background: $primary;
+
+// citation
+$color-cite: lighten($color-text, 40%);

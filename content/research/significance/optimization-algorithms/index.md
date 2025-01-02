@@ -1,0 +1,6 @@
+---
+title: Optimal Method for Convex Optimization
+weight: 1
+---
+
+Optimization is a common framework used to describe a wide variety of problems in science and engineering, from controlling humanoid robots to training machine learning models. Existing optimization algorithms, however, may be prohibitively slow to find good solutions, resulting in robot collisions or long training times. It is therefore important for algorithms to make the most efficient use of computational resources. My most significant research contribution is the design of the optimal first-order algorithm to minimize a smooth and strongly convex function {{< cite "LCSS2018" >}}. This algorithm achieves the best possible performance on this type of problem and therefore cannot be improved upon. My algorithm has spurred on a variety of other research, from proving fundamental bounds as to what is possible to designing novel algorithms for other scenarios, including robust optimization {{< cite "forthcoming-speedrobustness" >}}.

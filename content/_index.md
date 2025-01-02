@@ -8,5 +8,10 @@ university: Miami University
 city: Oxford
 state: Ohio
 university_link: https://www.miami.miamioh.edu/
-email: bvanscoy@miamioh.edu
+contact:
+  email: bvanscoy@miamioh.edu
+  url: vanscoy.github.io
+  address:
+    location: 260 Garland Hall, Oxford, OH, USA
+    url: www.google.com/maps/search/Garland+Hall,+East+High+Street,+Oxford,+OH,+USA
 ---

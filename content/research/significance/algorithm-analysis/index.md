@@ -1,0 +1,6 @@
+---
+title: Algorithm Analysis
+weight: 2
+---
+
+Characterizing the performance of algorithms with theoretical guarantees is crucial across diverse scenarios, from weeks-long training of large-language models to the real-time demands of robotics. Historically, the analysis of optimization algorithms has relied on extensive numerical computations to tune hyperparameters or deep insight by experts, both of which must be done on a case-by-case basis and produce bounds that may not be tight. Together with collaborators, we have developed a systematic approach to algorithm analysis. Given an algorithm and a class of optimization problems, the methodology automatically constructs bounds on the worst-case performance {{< cite "ICML2018" >}}; see also the tutorial paper {{< cite "CDC2023-lyap" >}}. We have applied this methodology to a wide variety of scenarios including distributed optimization {{< cite "TCNS2020" >}}, {{< cite "CDC2020" >}}, constrained optimization {{< cite "CDC2023-primaldual" >}}, and optimization with noisy gradients {{< cite "forthcoming-speedrobustness" >}}.

@@ -3,12 +3,6 @@ title: Bryan Van Scoy
 subtitle: Curriculum Vitaë
 type: cv
 name: Bryan Van Scoy
-contact:
-  email: bvanscoy@miamioh.edu
-  url: vanscoy.github.io
-  address:
-    location: 260 Garland Hall, East High Street, Oxford, OH, USA
-    url: www.google.com/maps/search/Garland+Hall,+East+High+Street,+Oxford,+OH,+USA
 education:
   - degree: PhD
     university: Northwestern University
