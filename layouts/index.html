@@ -45,6 +45,10 @@
       {{ with .github }}
       <li><a href="https://github.com/{{ . }}" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a></li>
       {{ end }}
+
+      {{ with .ieee }}
+      <li><a href="https://ieeexplore.ieee.org/author/{{ . }}" target="_blank"><i class="ai ai-ieee"></i>IEEE</a></li>
+      {{ end }}
       
       {{ with .orcid }}
       <li><a href="https://orcid.org/{{ . }}" target="_blank"><i class="ai ai-orcid"></i>ORCID</a></li>
@@ -54,8 +58,8 @@
       <li><a href="https://www.semanticscholar.org/author/{{ . }}" target="_blank"><i class="ai ai-semantic-scholar"></i>Semantic Scholar</a></li>
       {{ end }}
       
-      {{ with .ieee }}
-      <li><a href="https://ieeexplore.ieee.org/author/{{ . }}" target="_blank"><i class="ai ai-ieee"></i>IEEE</a></li>
+      {{ with .dblp }}
+      <li><a href="https://dblp.org/pid/{{ . }}.html" target="_blank"><i class="ai ai-dblp"></i>dblp</a></li>
       {{ end }}
   </ul>
   </div>
