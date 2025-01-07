@@ -13,28 +13,10 @@ params:
   github: vanscoy
   googlescholar: HMBAnMEAAAAJ
   semanticscholar: Bryan-Van-Scoy/3175450
+  mathscinet: 1327163
   name:
     - first: Bryan
     - Last: Van Scoy
-
-# markup:
-#   goldmark:
-#     extensions:
-#       definitionList: true
-#       footnote: true
-#       linkify: true
-#       strikethrough: true
-#       table: true
-#       taskList: true
-#       typographer: true
-#     parser:
-#       attribute: true
-#       autoHeadingID: true
-#       autoHeadingIDType: github
-#     renderer:
-#       hardWraps: false
-#       unsafe: true
-#       xhtml: false
 
 outputs:
   home:
