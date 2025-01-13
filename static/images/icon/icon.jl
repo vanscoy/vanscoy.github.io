@@ -1,52 +1,68 @@
 using Luxor
-using MathTeXEngine
-
-sz = 75
 
 function icon(sz, filename, maskable=false)
 
-    a = maskable ? sz/(75 * 1.45) : sz/75
-
-    Drawing(sz, sz, filename)
+    # x direction is to the right
+    # y direction is down
+    
+    if maskable
+        a = sz/(75 * 1.4)
+        Drawing(sz, sz, filename)
+        background(0.15,0.15,0.15,1)
+        o = Point(0,-7.5a)  # origin
+    else
+        a = sz/75
+        Drawing(sz, sz, filename)
+        background(0,0,0,0)
+        o = Point(0,-12a)  # origin
+    end
     
     origin()
-    maskable ? background(0.15,0.15,0.15,1) : background(0,0,0,0)
     sethue("#2f809d")
 
     # box(BoundingBox(), action = :stroke)
 
-    scale(a)
-    setline(8a)
+    d  = 17a  # distance from center to each corner of the square in 'b'
+    s  = 16a  # extra height of the stem on the 'b'
+    lw = 11a  # width of a line
 
-    p1 = Point(-20, -10)
-    p2 = Point(0, -30)
-    p3 = Point(20, -10)
-    p4 = Point(0, 10)
-    p5 = Point(-35, -25)
+    w = 2(d + s) + lw/√2  # width
+    h = (d + lw/√2) + (d√2 + s + lw/√2) # height
 
-    poly([p1, p2, p3, p4, p5], :stroke)
+    @show (a,w,h)
 
-    p6 = Point(0, 30)
-    p7 = Point(-30, 0)
-    p8 = Point(30, 0)
+    # setline(1)
+    # box(Point(0,0), w, h, action=:stroke)
 
-    poly([p7, p6, p8], :stroke)
+    setline(lw)
+    
+    bl = o + Point(-d, 0)  # left corner
+    bt = o + Point(0, -d)  # top corner
+    br = o + Point(d, 0)   # right corner
+    bb = o + Point(0, d)   # bottom corner
+    b  = bl + Point(-s,-s)
+    
+    poly([bl, bt, br, bb, b], :stroke)
+
+    t = bt + Point(0, -lw/√2)  # tip of top corner
+    r = br + Point(lw/√2, 0)   # tip of right corner
+    l = bl + Point(-lw/√2, 0)  # tip of left corner
+    
+    _, vl = intersectionlines(t, l, b, b+Point(0,1))      # left
+    _, vb = intersectionlines(bt, bb, vl, vl+Point(1,1))  # bottom
+    _, vr = intersectionlines(t, r, vb, vb+Point(1,-1))   # right
+
+    poly([vl, vb, vr], :stroke)
 
     # minimum safe area for masking
     # sethue("red")
     # setline(1)
-    # circle(Point(0,0), 0.4*sz/a, action=:stroke)
+    # circle(Point(0,0), 0.4*sz, action=:stroke)
 
     finish()
 end
 
-# icon(100,  "static/images/icon-100.png")
-# icon(144,  "static/images/icon-144.png")
-# icon(256,  "static/images/icon-256.png")
-# icon(512,  "static/images/icon-512.png")
-# icon(1024, "static/images/icon-1024.png")
 icon(75,   "static/images/icon.svg")
 icon(1024, "static/images/icon-maskable.png", true)
-# icon(75,   "static/images/icon-maskable.svg", true)
 
 preview()
