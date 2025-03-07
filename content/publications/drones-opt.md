@@ -1,15 +1,16 @@
 ---
 title: Optimal Positioning of Unmanned Aerial Vehical Base Stations using Mixed-Integer Linear Programming
+weight: 2
 authors:
   - premkumar
   - vanscoy
+journal: Drones
 publication-type: journal
 keywords:
   - robotics
 volume: 9
-number: 1
+issue: 1
 year: 2025
-ieee: 
 doi: '10.3390/drones9010044'
 googlescholar: YOwf2qJgpHMC
 bibtex: |

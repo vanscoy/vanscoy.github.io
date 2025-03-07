@@ -28,6 +28,6 @@ bibtex: |
     number  = {},
     pages   = {100160},
     url     = {https://www.sciencedirect.com/science/article/pii/S2773186324000902},
-    doi     = {http://dx.doi.org/10.1016/j.fraope.2024.100160}
+    doi     = {10.1016/j.fraope.2024.100160}
   }
 ---

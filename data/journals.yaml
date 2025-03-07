@@ -13,3 +13,9 @@
 - slug: IFAC-PapersOnLine
   name: IFAC-PapersOnLine
   url: 'https://www.sciencedirect.com/journal/ifac-papersonline'
+- slug: Drones
+  name: Drones
+  url: 'https://www.mdpi.com/journal/drones'
+- slug: Robotics
+  name: Robotics
+  url: 'https://www.mdpi.com/journal/robotics'
