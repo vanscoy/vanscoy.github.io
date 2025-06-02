@@ -81,6 +81,11 @@
     first: Mark
     last: Scott
   url: 'https://scholar.google.com/citations?user=pfDhDQsAAAAJ&hl=en'
+- slug: chidurala
+  name:
+    first: Veena
+    last: Chidurala
+  url: 'https://scholar.google.com/citations?user=U72uznUAAAAJ&hl=en'
 - slug: simpson-porco
   name:
     first: John
