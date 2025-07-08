@@ -1,5 +1,5 @@
 ---
-title: Optimal Positioning of Unmanned Aerial Vehical Base Stations using Mixed-Integer Linear Programming
+title: Optimal Positioning of Unmanned Aerial Vehicle Base Stations using Mixed-Integer Linear Programming
 weight: 5
 authors:
   - premkumar
@@ -17,7 +17,7 @@ bibtex: |
   @article{Drones2025-opt,
     author     = {Veeraswamy Premkumar, Gowtham Raj and Van Scoy, Bryan},
     journal    = {Drones},
-    title      = {Optimal Positioning of Unmanned Aerial Vehical (UAV) Base Stations using Mixed-Integer Linear Programming},
+    title      = {Optimal Positioning of Unmanned Aerial Vehicle (UAV) Base Stations using Mixed-Integer Linear Programming},
     year       = {2025},
     volume     = {9},
     number     = {1},
