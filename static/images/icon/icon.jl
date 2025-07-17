@@ -8,17 +8,19 @@ function icon(sz, filename, maskable=false)
     if maskable
         a = sz/(75 * 1.4)
         Drawing(sz, sz, filename)
-        background(0.15,0.15,0.15,1)
+        # background(0.15,0.15,0.15,1)
+        background("#2f809d")
         o = Point(0,-7.5a)  # origin
+        origin()
+        sethue("#0c2027")
     else
         a = sz/75
         Drawing(sz, sz, filename)
         background(0,0,0,0)
         o = Point(0,-12a)  # origin
+        origin()
+        sethue("#2f809d")
     end
-    
-    origin()
-    sethue("#2f809d")
 
     # box(BoundingBox(), action = :stroke)
 
