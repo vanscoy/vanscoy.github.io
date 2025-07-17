@@ -12,7 +12,7 @@ function icon(sz, filename, maskable=false)
         background("#2f809d")
         o = Point(0,-7.5a)  # origin
         origin()
-        sethue("#0c2027")
+        sethue("#12303b")
     else
         a = sz/75
         Drawing(sz, sz, filename)
