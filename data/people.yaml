@@ -86,6 +86,23 @@
     first: Veena
     last: Chidurala
   url: 'https://scholar.google.com/citations?user=U72uznUAAAAJ&hl=en'
+- slug: swanson
+  name:
+    first: Brian
+    middle: A
+    last: Swanson
+  url: 'https://scholar.google.com/citations?user=QimepKkAAAAJ&hl=en'
+- slug: ricco
+  name:
+    first: George
+    middle: D
+    last: Ricco
+  url: 'https://scholar.google.com/citations?user=uiF6SxoAAAAJ&hl=en'
+- slug: bhunia
+  name:
+    first: Suman
+    last: Bhunia
+  url: 'https://sbhunia.me/'
 - slug: simpson-porco
   name:
     first: John

@@ -7,7 +7,7 @@ authors:
 publication-type: forthcoming
 keywords:
   - optimization
-googlescholar: 
+googlescholar: KlAtU1dfN6UC
 bibtex: |
   @inproceedings{forthcoming-internal-model-tvopt,
     author    = {Bianchin, Gianluca and Van Scoy, Bryan},

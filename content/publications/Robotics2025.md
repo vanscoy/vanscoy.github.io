@@ -8,7 +8,7 @@ authors:
 journal: Robotics
 publication-type: journal
 keywords:
-  - robotics
+  - education
 volume: 14
 issue: 6
 year: 2025
