@@ -1,6 +1,6 @@
 ---
 title: The Internal Model Principle of Time-Varying Optimization
-weight: 1
+weight: 3
 authors:
   - bianchin
   - vanscoy
