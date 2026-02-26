@@ -1,6 +1,9 @@
 - slug: CSM
   name: IEEE Control Systems Magazine
   url: 'https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5488303'
+- slug: TAC
+  name: IEEE Transactions on Automatic Control
+  url: 'https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=9'
 - slug: LCSS
   name: IEEE Control Systems Letters
   url: 'https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=7782633'
