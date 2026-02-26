@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "ECE 412/512: Learning and Control"
 layout: "single"
 ---
