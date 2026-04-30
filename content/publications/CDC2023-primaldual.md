@@ -15,6 +15,7 @@ year: 2023
 ieee: 10384285
 doi: '10.1109/CDC49753.2023.10384285'
 googlescholar: 3fE2CSJIrl8C
+arxiv: 2309.11365
 bibtex: |
   @inproceedings{CDC2023-primaldual,
     author    = {Van Scoy, Bryan and Simpson-Porco, John W. and Lessard, Laurent},

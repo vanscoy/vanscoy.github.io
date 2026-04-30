@@ -54,6 +54,12 @@
         <i class="ai ai-google-scholar"></i>
     </a>
     {{ end }}
+
+    {{ with .arxiv }}
+    <a href="https://arxiv.org/pdf/{{ . }}" data-toggle="tooltip" target="_blank" title="arXiv">
+        <i class="ai ai-arxiv"></i>
+    </a>
+    {{ end }}
     
     {{ with .code }}
     <a href="{{ . }}" data-toggle="tooltip" target="_blank" title="Code"><i class="fa-solid fa-code"></i></a>

@@ -14,6 +14,7 @@ year: 2023
 ieee: 10384074
 doi: '10.1109/CDC49753.2023.10384074'
 googlescholar: MXK_kJrjxJIC
+arxiv: 2309.11377
 bibtex: |
   @inproceedings{CDC2023-lyap,
     author    = {Van Scoy, Bryan and Lessard, Laurent},

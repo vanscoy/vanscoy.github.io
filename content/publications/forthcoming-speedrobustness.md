@@ -8,6 +8,7 @@ publication-type: forthcoming
 keywords:
   - optimization
 googlescholar: hqOjcs7Dif8C
+arxiv: 2109.05059
 bibtex: |
   @inproceedings{forthcoming-speedrobustness,
     author    = {Van Scoy, Bryan and Lessard, Laurent},

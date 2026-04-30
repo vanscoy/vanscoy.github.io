@@ -14,6 +14,7 @@ year: 2023
 ieee: 10383319
 doi: '10.1109/CDC49753.2023.10383319'
 googlescholar: kNdYIx-mwKoC
+arxiv: 2309.11393
 bibtex: |
   @inproceedings{CDC2023-optcon,
     author    = {Van Scoy, Bryan and Lessard, Laurent},

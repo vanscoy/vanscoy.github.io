@@ -8,6 +8,7 @@ publication-type: forthcoming
 keywords:
   - optimization
 googlescholar: dhFuZR0502QC
+arxiv: 2604.09926
 bibtex: |
   @inproceedings{BV-GB:2026,
     author    = {Van Scoy, Bryan and Bianchin, Gianluca},

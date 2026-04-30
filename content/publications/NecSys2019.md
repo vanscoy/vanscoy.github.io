@@ -15,6 +15,7 @@ pages:
 year: 2019
 doi: '10.1016/j.ifacol.2019.12.181'
 googlescholar: roLk4NBRz8UC
+arxiv: 1905.11982
 bibtex: |
   @article{NecSys2019,
     author  = {Van Scoy, Bryan and Lessard, Laurent},
