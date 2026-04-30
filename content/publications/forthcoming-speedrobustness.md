@@ -1,6 +1,6 @@
 ---
+weight: 3
 title: The Speed-Robustness Trade-Off for First-Order Methods with Additive Gradient Noise
-weight: 4
 authors:
   - vanscoy
   - lessard
