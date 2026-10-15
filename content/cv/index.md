@@ -42,12 +42,17 @@ experience:
     location: Madison, WI
     advisor: lessard
 grants:
-  - funder: NSF
+  - sponsor: National Science Foundation
     number: 2347121
     title: "ERI: Systematic Design of Iterative Black-Box Optimization Algorithms"
-    year:
-      start: 2024
-      end: 2027
+    dates:
+      start:
+        month: July
+        year: 2024
+      end:
+        month: June
+        year: 2027
+    amount: 199,996
     url: https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2347121
 awards:
   - description: IEEE Control Systems Magazine Outstanding Paper Award

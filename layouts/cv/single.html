@@ -73,16 +73,24 @@
     <ul class="grants">
       {{ range . }}
         <li>
-          <div class="flex-container">
-            <div class="description">
-              {{ if .url }}
-                <a href="{{ .url }}" target="_blank">{{ .funder }}:&nbsp;{{ .title }}</a>
-              {{ else }}
-                {{ .funder }}:&nbsp;{{ .title }}
-              {{ end }}
-            </div>
-            <div class="year">{{ .year.start }} &ndash; {{ .year.end }}</div>
+          <div class="description">
+            {{ if .url }}
+              <a href="{{ .url }}" target="_blank">{{ .title }}</a>
+            {{ else }}
+              {{ .title }}
+            {{ end }}
           </div>
+          <ul>
+            {{ with .sponsor }}
+              <li class="sponsor">Sponsor: {{ . }}</li>
+            {{ end }}
+            {{ with .dates }}
+              <li class="dates">Dates: {{ .start.month }}, {{ .start.year }} &ndash; {{ .end.month }}, {{ .end.year }}</li>
+            {{ end }}
+            {{ with .amount }}
+              <li class="amount">Amount: ${{ . }}</li>
+            {{ end }}
+          </ul>
         </li>
       {{ end }}
     </ul>

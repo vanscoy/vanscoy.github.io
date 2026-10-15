@@ -199,10 +199,6 @@ a {
   ul.experience {
     padding: 0;
     
-    li:not(:last-child) {
-      padding-bottom: 25px;
-    }
-    
     li {
       display: flex;
       flex-wrap: wrap;
@@ -221,31 +217,43 @@ a {
       .year div {
         display: inline-block;
       }
+      &:not(:last-child) {
+        padding-bottom: 25px;
+      }
     }
   }
 
   ul.grants {
+    padding: 0;
 
-    .flex-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+    li:not(:last-child) {
+      padding-bottom: 25px;
     }
 
     li {
-      &:not(:last-child) {
-        padding-bottom: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      ul {
+        li {
+          display: list-item;
+          list-style-type: disc;
+          &:not(:last-child) {
+            padding-bottom: 0px;
+          }
+          &.dates, &.amount, &.sponsor {
+            color: $color-section-important;
+          }
+        }
       }
       .description {
         display: inline-block;
-        flex: 1;
+        padding-bottom: 2px;
+        font-weight: 500;
       }
-      
-      .year {
-        text-align: right;
-        display: inline-block;
-        color: $color-section-important;
-        min-width: 50px;
+      &:not(:last-child) {
+        padding-bottom: 25px;
       }
     }
   }
