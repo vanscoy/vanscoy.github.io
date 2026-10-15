@@ -66,6 +66,28 @@
     </ul>
   </div>
   {{ end }}
+
+  {{ with .grants }}
+  <div class="section">
+    <h2>Sponsored Projects</h2>
+    <ul class="grants">
+      {{ range . }}
+        <li>
+          <div class="flex-container">
+            <div class="description">
+              {{ if .url }}
+                <a href="{{ .url }}" target="_blank">{{ .funder }}:&nbsp;{{ .title }}</a>
+              {{ else }}
+                {{ .funder }}:&nbsp;{{ .title }}
+              {{ end }}
+            </div>
+            <div class="year">{{ .year.start }} &ndash; {{ .year.end }}</div>
+          </div>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
   
   {{ with .awards }}
   <div class="section">
