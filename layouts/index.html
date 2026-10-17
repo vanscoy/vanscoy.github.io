@@ -57,6 +57,10 @@
       {{ with .semanticscholar }}
       <li><a href="https://www.semanticscholar.org/author/{{ . }}" target="_blank"><i class="ai ai-semantic-scholar"></i>Semantic Scholar</a></li>
       {{ end }}
+
+      <!-- {{ with .mathscinet }}
+      <li><a href="https://mathscinet.ams.org/mathscinet/author?authorId={{ . }}" target="_blank"><i class="ai ai-mathscinet"></i>MathSciNet</a></li>
+      {{ end }} -->
       
       {{ with .dblp }}
       <li><a href="https://dblp.org/pid/{{ . }}.html" target="_blank"><i class="ai ai-dblp"></i>dblp</a></li>

@@ -1,5 +1,6 @@
 ---
-title: "ECE 411/511: Sensor Fusion for Robotics"
+title: Sensor Fusion for Robotics
+subtitle: ECE 411/511
 layout: "single"
 ---
 

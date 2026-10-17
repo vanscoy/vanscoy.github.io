@@ -1,5 +1,6 @@
 ---
-title: "ECE 601: State Variables for Engineers"
+title: State Variables for Engineers
+subtitle: ECE 601
 layout: single
 ---
 

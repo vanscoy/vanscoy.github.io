@@ -18,8 +18,14 @@ params:
   name:
     - first: Bryan
     - Last: Van Scoy
+  controleducation: https://control.education/
 
 outputs:
   home:
     - HTML
     - JSON
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

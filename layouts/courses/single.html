@@ -1,0 +1,48 @@
+{{ define "main" }}
+  {{ .Summary }}
+
+  <ol class="course">
+    {{ range sort .Pages "File.Path" "asc" }}
+    <h2>{{ .Title }}</h2>
+    <ol>
+    {{ range sort .Pages "File.Path" "asc" }}
+      <li class="lecture">
+        <a href="{{ .Permalink }}">
+          {{ .Title }}
+        </a>
+      </li>
+    {{ end }}
+    </ol>
+  {{ end }}
+  </ol>
+
+
+  {{ with .Params.content }}
+  <ol class="course">
+    {{ range . }}
+    <h2>{{ .part }}</h2>
+    <ol>
+    {{ range .lectures }}
+      <li class="lecture">
+        <div class="lecture-title">
+          {{ .title }}
+          {{ with .links }}
+          <div class="links">
+            {{- range . -}}
+              <a href="/courses/{{ $.Params.slug }}/{{ .url }}">{{ .name }}</a>
+            {{- end -}}
+          </div>
+          {{ end }}
+        </div>
+        <div class="tags">
+          {{ range .tags }}
+            <a href="{{ site.Params.controleducation }}{{ . }}/" class="tag">{{ . | strings.FirstUpper | humanize }}</a>
+          {{ end }}
+        </div>
+      </li>
+    {{ end }}
+    </ol>
+  {{ end }}
+  </ol>
+  {{ end }}
+{{ end }}

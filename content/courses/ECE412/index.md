@@ -1,5 +1,6 @@
 ---
-title: "ECE 412/512: Learning and Control"
+title: Learning and Control
+subtitle: ECE 412/512
 layout: "single"
 ---
 

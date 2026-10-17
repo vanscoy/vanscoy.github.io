@@ -169,6 +169,9 @@ a {
       color: $color-icon;
     }
   }
+  .section-header {
+    color: $color-title;
+  }
   
   ul.education {
     padding: 0;
@@ -298,6 +301,37 @@ a {
           text-align: center;
         }
       }
+    }
+  }
+}
+
+/*************************************
+  Card
+*************************************/
+.card {
+  position: relative;
+  &:hover {
+    background-color: darken($color-section-background, 1.5%);
+  }
+
+  h2 {
+    a {
+      &:hover {
+        color: lighten($color-title, 5%);
+      }
+    }
+  }
+
+  .section-header {
+    color: $color-title;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
     }
   }
 }
