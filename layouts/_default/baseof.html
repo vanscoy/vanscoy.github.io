@@ -17,8 +17,9 @@
     <script defer src="https://cloud.umami.is/script.js" data-website-id="4ddcdbb8-87a0-4672-bc8a-b33429c58b76"></script>
     
     <!-- css / sass -->
-    {{ $options := (dict "outputStyle" "compressed") }}
-    {{ $style := resources.Get "main.scss" | toCSS $options }}
+    {{ $opts := dict "transpiler" "dartsass" }}
+    {{ $style := resources.Get "main.scss" | css.Sass $opts }}
+
 
     <link rel="preload" href="{{ $style.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>

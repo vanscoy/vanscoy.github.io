@@ -1,6 +1,6 @@
 <div class="courses">
   
-  {{ $courses := where .Site.Data.courses.courses "tags" "intersect" (slice $.Page.File.BaseFileName) }}
+  {{ $courses := where hugo.Data.courses.courses "tags" "intersect" (slice $.Page.File.BaseFileName) }}
   
   {{ with $courses }}
     <h2>Courses</h2>

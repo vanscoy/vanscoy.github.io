@@ -1,0 +1,24 @@
+{{ define "main" }}
+  {{ with .Params.PI }}
+    <h2>Principle Investigator</h2>
+    {{ partial "person.html" . }}
+  {{ end }}
+  {{ with .Params.students }}
+    {{ with .current }}
+      <h2>Current Students</h2>
+      <ul>
+      {{ range . }}
+        <li>{{ partial "current-group-member.html" . }}</li>
+      {{ end }}
+      </ul>
+    {{ end }}
+    {{ with .former }}
+      <h2>Former Students</h2>
+      <ol>
+      {{ range . }}
+        <li>{{ partial "person.html" . }}</li>
+      {{ end }}
+      </ol>
+    {{ end }}
+  {{ end }}
+{{ end }}

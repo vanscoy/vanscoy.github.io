@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "theme";
+@use "font";
+
 /*************************************
   Headers
 *************************************/
@@ -14,9 +18,9 @@ h3 {
   margin: 8px 0 2px 0;
 }
 h1, h2, h3 {
-  font-family: $font-sans;
+  font-family: font.$font-sans;
   font-weight: bold;
-  color: $color-header;
+  color: theme.$color-header;
 }
 
 /*************************************
@@ -36,16 +40,16 @@ h1, h2, h3 {
 *************************************/
 body {
   font-size: 18px;
-  color: $color-text;
-  background-color: $color-background;
-  font-family: $font-sans;
+  color: theme.$color-text;
+  background-color: theme.$color-background;
+  font-family: font.$font-sans;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
 }
 
 a {
-  color: $color-link;
+  color: theme.$color-link;
   
   &:link {
     text-decoration: none;
@@ -60,10 +64,10 @@ a {
 
 .main {
   display: inline-block;
-  max-width: $content-width;
+  max-width: theme.$content-width;
   min-width: 320px;
   margin: auto;
-  padding-left: $nav-width;
+  padding-left: theme.$nav-width;
 
   @media only screen and (max-width: 767px) {
     max-width: 92%;
@@ -72,7 +76,7 @@ a {
   }
 
   .title {
-    color: $color-title;
+    color: theme.$color-title;
     font-size: 200%;
     font-weight: bold;
     font-family: sans-serif;
@@ -81,7 +85,7 @@ a {
   }
   
   .subtitle {
-    color: $color-subtitle;
+    color: theme.$color-subtitle;
     font-size: 65%;
     font-weight: bold;
     font-family: sans-serif;
@@ -106,7 +110,7 @@ a {
       text-align: left;
       p {
         font-weight: bold;
-        color: $color-title;
+        color: theme.$color-title;
         margin: 0;
       }
       #position {
@@ -115,9 +119,9 @@ a {
     }
   }
   a {
-    color: $color-section-link;
+    color: theme.$color-section-link;
     &:hover {
-      color: $color-section-link-hover;
+      color: theme.$color-section-link-hover;
       text-decoration: none;
     }
     i {
@@ -139,7 +143,7 @@ a {
 }
 
 .ai, .fa-brands, .fas {
-  color: $color-icon;
+  color: theme.$color-icon;
 }
 
 /*************************************
@@ -147,18 +151,18 @@ a {
 *************************************/
 .section {
   margin: auto;
-  background-color: $color-section-background;
+  background-color: theme.$color-section-background;
   padding: 10px 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px $color-section-box-shadow;
+  box-shadow: 0 0 10px theme.$color-section-box-shadow;
   margin-bottom: 20px;
-  color: $color-section-text;
+  color: theme.$color-section-text;
 
   h2 {
-    color: $color-title;
+    color: theme.$color-title;
     font-size: 120%;
     a {
-      color: $color-section-title;
+      color: theme.$color-section-title;
     }
   }
   p {
@@ -166,11 +170,11 @@ a {
     
     i.icon {
       margin-right: 20px;
-      color: $color-icon;
+      color: theme.$color-icon;
     }
   }
   .section-header {
-    color: $color-title;
+    color: theme.$color-title;
   }
   
   ul.education {
@@ -194,7 +198,7 @@ a {
         width: calc(100% - 45px);
       }
       .year, .advisor, .university {
-        color: $color-section-important;
+        color: theme.$color-section-important;
       }
     }
   }
@@ -215,7 +219,7 @@ a {
         font-weight: 500;
       }
       .year, .advisor, .department, .position, .location {
-        color: $color-section-important;
+        color: theme.$color-section-important;
       }
       .year div {
         display: inline-block;
@@ -246,7 +250,7 @@ a {
             padding-bottom: 0px;
           }
           &.dates, &.amount, &.sponsor {
-            color: $color-section-important;
+            color: theme.$color-section-important;
           }
         }
       }
@@ -274,7 +278,7 @@ a {
       .year {
         text-align: left;
         display: inline-block;
-        color: $color-section-important;
+        color: theme.$color-section-important;
         min-width: 50px;
       }
     }
@@ -289,10 +293,10 @@ a {
         padding-bottom: 0;
       }
       a {
-        color: $color-profile-link;
+        color: theme.$color-profile-link;
         font-size: 100%;
         &:hover {
-          color: $color-profile-link-hover;
+          color: theme.$color-profile-link-hover;
           text-decoration: none;
         }
         i {
@@ -311,19 +315,19 @@ a {
 .card {
   position: relative;
   &:hover {
-    background-color: darken($color-section-background, 1.5%);
+    background-color: color.adjust(theme.$color-section-background, $lightness: -1.5%);
   }
 
   h2 {
     a {
       &:hover {
-        color: lighten($color-title, 5%);
+        color: color.adjust(theme.$color-title, $lightness: 5%);
       }
     }
   }
 
   .section-header {
-    color: $color-title;
+    color: theme.$color-title;
     &::before {
       content: "";
       position: absolute;
@@ -347,10 +351,10 @@ a {
     font-size: 22px;
     i {
       padding-right: 10px;
-      color: $color-icons;
+      color: theme.$color-icons;
       cursor: pointer;
       &:hover {
-        color: $color-icons-hover;
+        color: theme.$color-icons-hover;
       }
     }
   }

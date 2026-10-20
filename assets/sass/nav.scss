@@ -1,12 +1,15 @@
+@use "theme";
+@use "font";
+
 nav {
 
   z-index: 1; // stay on top
   top: 0; // stay at the top
   left: 0;
   overflow: hidden; // disable scrolling
-  background-color: $color-navbar-background;
+  background-color: theme.$color-navbar-background;
   height: 100%;
-  width: $nav-width;
+  width: theme.$nav-width;
   position: fixed;
   align-items: center; // vertical alignment
   display: block;
@@ -19,7 +22,7 @@ nav {
   div {
     &.logo {
       display: none;
-      color: $color-navbar-brand;
+      color: theme.$color-navbar-brand;
       font: 30pt/50pt Palatino;
       font-weight: bold;
       padding: 10pt;
@@ -38,17 +41,17 @@ nav {
         padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 15px;
-        font-family: $font-sans;
+        font-family: font.$font-sans;
         display: block;
         animation: none;
 
         &:link, &:visited {
-          color: $color-navbar-link;
+          color: theme.$color-navbar-link;
           text-decoration: none;
         }
 
         &:hover, &.current {
-          color: $color-navbar-link-active;
+          color: theme.$color-navbar-link-active;
         }
       }
     }
@@ -66,11 +69,11 @@ nav {
       right: 0;
       top: 0;
       position: absolute;
-      background-color: $color-navbar-background;
+      background-color: theme.$color-navbar-background;
       padding: 10pt;
       border: none;
       i {
-        color: $color-navbar-brand;
+        color: theme.$color-navbar-brand;
       }
     }
 

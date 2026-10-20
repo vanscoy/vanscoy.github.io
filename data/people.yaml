@@ -139,3 +139,33 @@
     first: Alexander
     last: Isurin
   url: 'https://ieeexplore.ieee.org/author/37725513100'
+- slug: patch
+  name:
+    first: Adrianna
+    last: Patch
+  url: 'https://miamioh.edu/profiles/cec/adrianna-patch.html'
+- slug: pitkar
+  name:
+    first: Ashutosh
+    last: Pitkar
+  url: 'https://www.linkedin.com/in/ashutosh-pitkar'
+- slug: hogshead
+  name:
+    first: Nathan
+    last: Hogshead
+  url: 'https://www.linkedin.com/in/nathan-hogshead'
+- slug: skinner
+  name:
+    first: Samuel
+    last: Skinner
+  url: 'https://www.linkedin.com/in/samuelskinner22'
+- slug: brown
+  name:
+    first: Michael
+    last: Brown
+  url: 'https://www.linkedin.com/in/michael-brown2026'
+- slug: neiderman
+  name:
+    first: Cole
+    last: Neiderman
+  url: 'https://www.linkedin.com/in/coleneiderman'

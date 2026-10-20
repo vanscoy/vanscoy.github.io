@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "theme";
+@use "font";
+
 .course-links {
   display: inline-block;
   height: 25px;
@@ -13,7 +17,7 @@
     margin-bottom: 5px;
   }
 
-  font-family: $font-sans;
+  font-family: font.$font-sans;
   .part {
     padding: 16px 0 0 0;
     margin: 0;
@@ -65,9 +69,9 @@
           content: ")";
         }
         a {
-          color: lighten($primary, 20%);
+          color: color.adjust(theme.$primary, $lightness: 20%);
           &:hover {
-            color: lighten($primary, 10%);
+            color: color.adjust(theme.$primary, $lightness: 10%);
           }
         }
       }

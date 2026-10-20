@@ -1,5 +1,9 @@
-languageCode: en-us
 title: Van Scoy
+
+languages:
+  en:
+    label: English
+    locale: en-us
 
 # baseURL: //vanscoy.github.io/
 relativeURLs: true

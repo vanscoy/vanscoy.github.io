@@ -1,4 +1,4 @@
-{{ with (index (where site.Data.journals "slug" .) 0) }}
+{{ with (index (where hugo.Data.journals "slug" .) 0) }}
   <a href="{{ .url }}" target="_blank">{{ .name }}</a>
 {{ else }}
   <a href="{{ .url }}" target="_blank">{{ .name }}</a>

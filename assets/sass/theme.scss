@@ -1,62 +1,64 @@
+@use "sass:color";
+
 // main
 $content-width: 60%;
 $primary: #153a47;
 $secondary: #472215;
-$color-text: lighten(black, 0%);
-$color-background: mix(white, $primary, 95%);  // #f3f5f6
+$color-text: color.adjust(black, $lightness: 0%);
+$color-background: color.mix(white, $primary, 95%);  // #f3f5f6
 $color-link: red;
-$color-header: lighten($color-text, 15%);
+$color-header: color.adjust($color-text, $lightness: 15%);
 $color-title: $primary;
-$color-subtitle: lighten($color-text, 40%);
+$color-subtitle: color.adjust($color-text, $lightness: 40%);
 
 // section
-$color-section-background: mix(white, $primary, 92%);
+$color-section-background: color.mix(white, $primary, 92%);
 $color-section-text: black;
 $color-section-title: $color-section-text;
-$color-section-important: lighten($color-section-text, 30%);
+$color-section-important: color.adjust($color-section-text, $lightness: 30%);
 $color-section-link: $color-section-text;
-$color-section-link-hover: lighten($primary, 20%);
-$color-section-box-shadow: darken($color-section-background, 25%);
+$color-section-link-hover: color.adjust($primary, $lightness: 20%);
+$color-section-box-shadow: color.adjust($color-section-background, $lightness: -25%);
 
 // profile
-$color-profile-link: darken($color-text, 15%);
-$color-profile-link-hover: lighten($primary, 25%);
+$color-profile-link: color.adjust($color-text, $lightness: -15%);
+$color-profile-link-hover: color.adjust($primary, $lightness: 25%);
 
 // publication
-$color-publication-link: darken($color-text, 10%);
-$color-publication-link-hover: lighten($primary, 15%);
-$color-publication-title: lighten($color-text, 10%);
+$color-publication-link: color.adjust($color-text, $lightness: -10%);
+$color-publication-link-hover: color.adjust($primary, $lightness: 15%);
+$color-publication-title: color.adjust($color-text, $lightness: 10%);
 $color-author-link: $color-text;
-$color-author-link-hover: lighten($primary, 15%);
+$color-author-link-hover: color.adjust($primary, $lightness: 15%);
 $color-publication-sort-background: $primary;
-$color-publication-sort-text: lighten($primary, 80%);
-$color-publication-sort-background-selected: lighten($color-publication-sort-background, 10%);
+$color-publication-sort-text: color.adjust($primary, $lightness: 80%);
+$color-publication-sort-background-selected: color.adjust($color-publication-sort-background, $lightness: 10%);
 
 // icon
-$color-icon: lighten($primary, 10%);
-$color-icons: lighten($primary, 10%);
-$color-icons-hover: lighten($primary, 20%);
+$color-icon: color.adjust($primary, $lightness: 10%);
+$color-icons: color.adjust($primary, $lightness: 10%);
+$color-icons-hover: color.adjust($primary, $lightness: 20%);
 
 // select menu
-$color-select: lighten($color-text, 10%);
-$color-select-background: lighten($color-background, 3%);
+$color-select: color.adjust($color-text, $lightness: 10%);
+$color-select-background: color.adjust($color-background, $lightness: 3%);
 
 // tag
-$color-tag-background: mix(white, $primary, 80%);
-$color-tag-text: lighten(black, 20%);
-$color-tag-symbol: lighten($primary, 15%);
+$color-tag-background: color.mix(white, $primary, 80%);
+$color-tag-text: color.adjust(black, $lightness: 20%);
+$color-tag-symbol: color.adjust($primary, $lightness: 15%);
 
-$color-tag-background-hover: darken($color-tag-background, 3%);
-$color-tag-text-hover: lighten($color-tag-text, 8%);
-$color-tag-symbol-hover: lighten($color-tag-symbol, 8%);
+$color-tag-background-hover: color.adjust($color-tag-background, $lightness: -3%);
+$color-tag-text-hover: color.adjust($color-tag-text, $lightness: 8%);
+$color-tag-symbol-hover: color.adjust($color-tag-symbol, $lightness: 8%);
 
 // navbar
 $nav-width: 150px;
 $nav-height: 50px;
-$color-navbar-link: lighten($primary, 80%);
+$color-navbar-link: color.adjust($primary, $lightness: 80%);
 $color-navbar-link-active: white;
 $color-navbar-brand: $color-navbar-link;
 $color-navbar-background: $primary;
 
 // citation
-$color-cite: lighten($color-text, 40%);
+$color-cite: color.adjust($color-text, $lightness: 40%);

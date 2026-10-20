@@ -1,6 +1,6 @@
 <div class="references">
   
-  {{ $references := where .Site.Data.references.references "tags" "intersect" (slice $.Page.File.BaseFileName) }}
+  {{ $references := where hugo.Data.references.references "tags" "intersect" (slice $.Page.File.BaseFileName) }}
   
   {{ with $references }}
     <h2>References</h2>
