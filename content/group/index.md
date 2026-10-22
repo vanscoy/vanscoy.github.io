@@ -1,8 +1,9 @@
 ---
-title: Group
-PI: vanscoy
-students:
+title: Research Group
+members:
   current:
+    - slug: bryan
+      role: PI
     - slug: skinner
       degree: MS
       major: ECE

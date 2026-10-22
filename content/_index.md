@@ -1,6 +1,6 @@
 ---
 title: Bryan Van Scoy
-image: /images/people/vanscoy.jpg
+slug: vanscoy
 position: Assistant Professor
 department: Electrical and Computer Engineering
 department_link: https://miamioh.edu/cec/academics/departments/ece/index.html

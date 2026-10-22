@@ -12,6 +12,7 @@ relativeURLs: true
 disablePathToLower: true
 
 params:
+  slug: vanscoy
   ieee: 37085411841
   orcid: 0000-0002-8286-2311
   github: vanscoy

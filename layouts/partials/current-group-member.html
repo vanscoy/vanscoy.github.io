@@ -1,4 +1,11 @@
 <div class="header">
-  <img src="/images/people/{{ .slug }}.png" alt="{{ .slug }}"/>
+  {{ $jpgPath := printf "static/images/people/%s.jpg" .slug }}
+  {{ $pngPath := printf "static/images/people/%s.png" .slug }}
+
+  {{ if fileExists $jpgPath }}
+    <img src="{{ printf "/images/people/%s.jpg" .slug | relURL }}" alt="">
+  {{ else if fileExists $pngPath }}
+    <img src="{{ printf "/images/people/%s.png" .slug | relURL }}" alt="">
+  {{ end }}
   {{ partial "person.html" .slug }} ({{ .degree }}, {{ .major }})
 </div>

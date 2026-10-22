@@ -62,6 +62,10 @@ a {
   }
 }
 
+img {
+  max-width: 100%;
+}
+
 .main {
   display: inline-block;
   max-width: theme.$content-width;
@@ -144,6 +148,10 @@ a {
 
 .ai, .fa-brands, .fas {
   color: theme.$color-icon;
+}
+
+.text-nowrap {
+  white-space: nowrap;
 }
 
 /*************************************
@@ -356,6 +364,86 @@ a {
       &:hover {
         color: theme.$color-icons-hover;
       }
+    }
+  }
+}
+
+
+
+
+
+/* Responsive Grid layout */
+.people-grid {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* 1. Mobile Phones (Default): 1 clean vertical column */
+  grid-template-columns: repeat(1, 1fr); 
+
+  /* 2. Tablets / Small Screens (Wide enough for side-by-side) */
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  /* 3. Standard Laptops / Desktops */
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+
+  /* 4. Large Monitors */
+  @media (min-width: 1200px) {
+    /* Caps columns at 4, or drops back to pixels to stop stretching */
+    grid-template-columns: repeat(4, 1fr); 
+  }
+
+  /* Individual Card Styling */
+  .person-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+    background-color: theme.$color-section-background;
+    padding: 1rem;
+    border-radius: 8px;
+
+    /* Forces all images into identical squares */
+    .person-image-wrapper {
+      width: 80%;
+      aspect-ratio: 1 / 1; /* Makes it a perfect square */
+      overflow: hidden;
+      border-radius: 8px; /* Optional: smooth corners (use 50% for circles) */
+      background-color: black;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      margin-bottom: 0.75rem;
+
+      .person-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+
+    /* Name text styling */
+    .person-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0;
+      color: theme.$color-text;
+    }
+
+    /* Placeholder box styling */
+    .person-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9ca3af;
+      font-size: 0.875rem;
     }
   }
 }

@@ -1,24 +1,43 @@
 {{ define "main" }}
-  {{ with .Params.PI }}
-    <h2>Principle Investigator</h2>
-    {{ partial "person.html" . }}
-  {{ end }}
-  {{ with .Params.students }}
+  {{ with .Params.members }}
     {{ with .current }}
-      <h2>Current Students</h2>
-      <ul>
-      {{ range . }}
-        <li>{{ partial "current-group-member.html" . }}</li>
-      {{ end }}
-      </ul>
+      <div class="section">
+      <h2>Current Members</h2>
+        <div class="people-grid">
+        {{ range . }}
+          <div class="person-card">
+            <div class="person-image-wrapper">
+              {{ $pattern := printf "images/people/%s.{jpg,png}" .slug }}
+              {{ with resources.GetMatch $pattern }}
+                <img src="{{ .RelPermalink }}" alt="" class="person-image">
+              {{ end }}
+              </div>
+            <h3 class="person-name">
+              <span class="text-nowrap">
+                {{ partial "person.html" .slug }}
+              </span>
+              <span class="text-nowrap">
+              {{ with .role }}
+                ({{ . }})
+              {{ else }}
+                ({{ .degree }}, {{ .major }})
+              {{ end }}
+              </span>
+            </h3>
+          </div>
+        {{ end }}
+        </div>
+      </div>
     {{ end }}
     {{ with .former }}
-      <h2>Former Students</h2>
-      <ol>
+      <div class="section">
+      <h2>Former Members</h2>
+      <ol reversed>
       {{ range . }}
         <li>{{ partial "person.html" . }}</li>
       {{ end }}
       </ol>
+      </div>
     {{ end }}
   {{ end }}
 {{ end }}

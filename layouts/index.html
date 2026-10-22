@@ -1,7 +1,10 @@
 {{ define "main" }}
   
   <div class="header">
-    <img src="{{ .Params.image }}" alt="headshot"/>
+    {{ $pattern := printf "images/people/%s.{jpg,png}" .Params.slug }}
+    {{ with resources.GetMatch $pattern }}
+      <img src="{{ .RelPermalink }}" alt="" class="headshot">
+    {{ end }}
     <div>
         <p id="position">{{ .Params.position }}</p>
         <a href="{{ .Params.department_link }}" target="_blank">{{ .Params.department }}</a>
