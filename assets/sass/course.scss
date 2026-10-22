@@ -10,68 +10,79 @@
 }
 
 .course {
-  padding: 6px 0px;
-  -webkit-animation: fadeEffect 1s;
-  animation: fadeEffect 1s;
-  h2 {
-    margin-bottom: 5px;
-  }
+  .content {
+    padding: 6px 0px 6px 2.5rem;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    list-style: none;
+    counter-reset: part-count;
+    counter-reset: lecture-count;
+    padding-left: 0;
 
-  font-family: font.$font-sans;
-  .part {
-    padding: 16px 0 0 0;
-    margin: 0;
-    font-weight: bold;
-    color: #404040;
-  }
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  .col1 {
-    width: 4%;
-    text-align: center;
-  }
-  .col2 {
-    width: 45%;
-    text-align: left;
-    padding-left: 0.5em;
-  }
-  .col3 {
-    width: 50%;
-    text-align: left;
-    padding-left: 0.5em;
-  }
-  th {
-    font-weight: bold;
-    text-align: center;
-  }
-  .tentative {
-    color: #95a5a6;
-  }
-
-  ol {
-    li.lecture {
-      font-weight: 500;
-      padding-bottom: 10px;
-      &:last-child {
-        padding-bottom: 0;
-      }
-      .lecture-title {
-        font-weight: 500;
-      }
-      .links {
-        display: inline-block;
+    .part {
+      counter-increment: part-count;
+      
+      .part-title {
+        display: flex;
+        margin-bottom: 5px;
+        font-size: 120%;
+        padding: 20px 0 10px 0;
+        font-weight: bold;
+        color: #404040;
+        
         &::before {
-          content: "(";
+          content: counter(part-count, upper-roman) ".";
+          min-width: 35px;
+          flex-shrink: 0;
+          text-align: left;
         }
-        &::after {
-          content: ")";
-        }
-        a {
-          color: color.adjust(theme.$primary, $lightness: 20%);
-          &:hover {
-            color: color.adjust(theme.$primary, $lightness: 10%);
+      }
+      .lectures {
+        list-style: none;
+
+        .lecture {
+          padding-left: 0;
+          display: block;
+          counter-increment: lecture-count;
+          font-weight: 500;
+          padding-bottom: 8px;
+
+          .lecture-title {
+            display: flex;
+            flex-grow: 1;
+            font-weight: 500;
+            
+            &::before {
+              content: counter(lecture-count) ".";
+              min-width: 35px;
+              flex-shrink: 0;
+              text-align: left;
+            }
+          }
+
+          .tags {
+            margin-left: 35px;
+          }
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+
+          .links {
+            display: inline-block;
+            &::before {
+              content: "(";
+              padding-left: 5px;
+            }
+            &::after {
+              content: ")";
+            }
+            a {
+              color: color.adjust(theme.$primary, $lightness: 20%);
+              &:hover {
+                color: color.adjust(theme.$primary, $lightness: 10%);
+              }
+            }
           }
         }
       }
