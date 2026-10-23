@@ -2,7 +2,7 @@
 title: Research Group
 members:
   current:
-    - slug: bryan
+    - slug: vanscoy
       role: PI
     - slug: skinner
       degree: MS

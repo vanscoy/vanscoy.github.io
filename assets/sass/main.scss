@@ -106,7 +106,8 @@ img {
       vertical-align: top;
       max-width: 120px;
       margin-right: 20px;
-      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
     }
     
     div {
@@ -375,7 +376,7 @@ img {
 /* Responsive Grid layout */
 .people-grid {
   display: grid;
-  gap: 2rem;
+  gap: 0.5rem 1rem;
   width: 100%;
   box-sizing: border-box;
 
@@ -406,12 +407,12 @@ img {
     text-align: center;
     gap: 0;
     background-color: theme.$color-section-background;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 8px;
 
     /* Forces all images into identical squares */
     .person-image-wrapper {
-      width: 80%;
+      width: 100%;
       aspect-ratio: 1 / 1; /* Makes it a perfect square */
       overflow: hidden;
       border-radius: 8px; /* Optional: smooth corners (use 50% for circles) */
