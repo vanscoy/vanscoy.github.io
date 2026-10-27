@@ -7,8 +7,6 @@ languages:
 
 # baseURL: //vanscoy.github.io/
 relativeURLs: true
-# uglyURLs: true
-# canonifyURLs: true
 disablePathToLower: true
 
 params:

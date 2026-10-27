@@ -20,7 +20,7 @@
               {{ with .role }}
                 ({{ . }})
               {{ else }}
-                ({{ .degree }}, {{ .major }})
+                ({{ .degree }} in {{ .major }})
               {{ end }}
               </span>
             </h3>
@@ -32,11 +32,20 @@
     {{ with .former }}
       <div class="section">
       <h2>Former Members</h2>
-      <ol reversed>
+      <ul class="former-members">
       {{ range . }}
-        <li>{{ partial "person.html" . }}</li>
+        <li>
+          <div class="year">{{ .year }}</div>
+          <div class="name">{{ partial "person.html" .slug }}&nbsp;({{ .degree }} in {{ .major }})</div>
+          {{ with .thesis }}
+            <a class="thesis" href="{{ .url }}" target="_blank"><i>{{ .title }}</i></a>
+          {{ end }}
+          {{ with .project }}
+            <div class="project"><i>{{ .title }}</i></div>
+          {{ end }}
+        </li>
       {{ end }}
-      </ol>
+      </ul>
       </div>
     {{ end }}
   {{ end }}

@@ -247,8 +247,7 @@ img {
     }
 
     li {
-      display: flex;
-      flex-wrap: wrap;
+      display: block;
       justify-content: space-between;
 
       ul {
@@ -313,6 +312,36 @@ img {
           margin: auto;
           text-align: center;
         }
+      }
+    }
+  }
+
+  ul.former-members {
+    list-style-type: none;
+    padding: 0;
+    
+    li {
+      display: grid;
+      grid-template-columns: 50px 1fr; 
+      
+      &:not(:last-child) {
+        padding-bottom: 10px;
+      }
+
+      .name {
+        a {
+          font-weight: 600;
+        }
+      }
+      
+      .year {
+        text-align: left;
+        color: theme.$color-section-important;
+      }
+      
+      .thesis, .project {
+        grid-column: 2; 
+        display: block;
       }
     }
   }
