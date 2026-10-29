@@ -464,9 +464,15 @@ img {
       margin: 0;
       color: theme.$color-text;
 
+      /* Name and role sit side by side when they fit, otherwise stack; the gap
+         replaces the space between them, which --minify strips */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 0.3em;
+
       /* Keep each span on one line when it fits, but wrap inside the card when it doesn't */
       span {
-        display: inline-block;
         max-width: 100%;
         white-space: normal;
       }
