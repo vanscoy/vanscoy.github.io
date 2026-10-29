@@ -342,6 +342,7 @@ img {
       .thesis, .project {
         grid-column: 2; 
         display: block;
+        color: theme.$color-section-important;
       }
     }
   }
@@ -460,9 +461,15 @@ img {
     /* Name text styling */
     .person-name {
       font-size: 1.1rem;
-      font-weight: 600;
       margin: 0;
       color: theme.$color-text;
+
+      span:first-child {
+        font-weight: 600;
+      }
+      span:last-child {
+        font-weight: normal;
+      }
     }
 
     /* Placeholder box styling */

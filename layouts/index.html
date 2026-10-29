@@ -1,7 +1,7 @@
 {{ define "main" }}
   
   <div class="header">
-    {{ $pattern := printf "images/people/%s.{jpg,png}" .Params.slug }}
+    {{ $pattern := printf "images/people/%s.*" .Params.slug }}
     {{ with resources.GetMatch $pattern }}
       <img src="{{ .RelPermalink }}" alt="" class="headshot">
     {{ end }}
