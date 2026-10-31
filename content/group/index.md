@@ -20,6 +20,13 @@ members:
       major: Math
       project:
         title: Uncertain Graded Dynamical Systems
+    - slug: ha
+      year: 2025
+      degree: MS
+      major: ECE
+      thesis:
+        title: "Algorithm Analysis: Automatic Lyapunov-based Analysis of First-Order Methods In Julia"
+        url: https://etd.ohiolink.edu/acprod/odb_etd/etd/r/1501/10?clear=10&p10_accession_num=miami174555606128103
     - slug: pitkar
       year: 2024
       degree: MS
@@ -40,13 +47,6 @@ members:
       thesis:
         title: Centralized Deep Reinforcement Learning and Optimization in UAV Communication Networks Towards Enhanced User Coverage
         url: https://etd.ohiolink.edu/acprod/odb_etd/etd/r/1501/10?clear=10&p10_accession_num=miami172080162194011
-    - slug: ha
-      year: 2024
-      degree: MS
-      major: ECE
-      thesis:
-        title: "Algorithm Analysis: Automatic Lyapunov-based Analysis of First-Order Methods In Julia"
-        url: https://etd.ohiolink.edu/acprod/odb_etd/etd/r/1501/10?clear=10&p10_accession_num=miami174555606128103
     - slug: khan
       year: 2024
       degree: MS
@@ -55,7 +55,7 @@ members:
         title: Distributed UAV-Based Wireless Communications Using Multi-Agent Deep Reinforcement Learning
         url: https://etd.ohiolink.edu/acprod/odb_etd/r/etd/search/10?p10_accession_num=miami1732095962824963&clear=10&session=104215488123675
     - slug: hengstebeck
-      year: 2024
+      year: 2023
       degree: MS
       major: ECE
       thesis:
